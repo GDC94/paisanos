@@ -1,17 +1,12 @@
 import { Container } from "layouts/mainLayout";
-import { CardNft } from "components/cardNft";
-import { CardNftContainer, CardsSectionContainer } from "./cardsSection.styles";
+import { CardsGridComponent } from "./cardsGrid";
+import { CardsSectionContainer } from "./cardsSection.styles";
 
 const cardsSection = () => {
   return (
     <CardsSectionContainer>
       <Container>
-        <CardNftContainer>
-          <CardNft />
-          <CardNft />
-          <CardNft />
-          <CardNft />
-        </CardNftContainer>
+        <CardsGridComponent />
       </Container>
     </CardsSectionContainer>
   );
