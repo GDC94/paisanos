@@ -2,11 +2,15 @@ import classes from "../../../utils/classes";
 import { ButtonContainer } from "./buttonPaisa.styles";
 
 export interface ButtonPaisaProps {
-  buttonType?: "small-outline" | "large-solid" | "large-outline" | "galery-controls" ;
+  buttonType?:
+    | "small-outline"
+    | "large-solid"
+    | "large-outline"
+    | "galery-controls";
   text?: string;
   icon?: JSX.Element;
   onClick?: () => void;
-  withoutBorder?: "without-border"; 
+  withoutBorder?: "without-border";
 }
 
 const ButtonPaisa = ({
@@ -17,7 +21,10 @@ const ButtonPaisa = ({
   withoutBorder,
 }: ButtonPaisaProps) => {
   return (
-    <ButtonContainer className={classes(buttonType, withoutBorder)} onClick={onClick}>
+    <ButtonContainer
+      className={classes(buttonType, withoutBorder)}
+      onClick={onClick}
+    >
       {icon}
       {text}
     </ButtonContainer>

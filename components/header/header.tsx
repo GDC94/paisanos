@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Text } from "../text";
-import { ButtonPaisa } from "../buttonPaisa";
+import { ButtonPaisa } from "../commons/buttonPaisa";
 import {
   Divider,
   HeaderContainer,

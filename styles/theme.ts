@@ -35,10 +35,6 @@ export const theming = {
   },
 
   fonts: {
-    Montserrat: "'Montserrat', sans-serif",
-    Rubik: "'Rubik', sans-serif",
-    SpaceMono: "'Space Mono', monospace",
-
     Poppins: "'Poppins', sans-serif",
     DMsans: "'DM Sans', sans-serif",
   },

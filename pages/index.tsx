@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { MainLayout } from "layouts/mainLayout";
-import { Header } from "components/pages/home/NavSection";
+
+import { HeroSection } from "components/pages/home/heroSection";
+import { NavbarSection } from "components/pages/home/navSection";
 
 const Home = () => {
   return (
@@ -8,7 +10,8 @@ const Home = () => {
       <Head>
         <title>NFPaisanos</title>
       </Head>
-      <Header />
+      <NavbarSection />
+      <HeroSection />
     </MainLayout>
   );
 };

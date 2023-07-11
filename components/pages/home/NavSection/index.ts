@@ -1,1 +1,1 @@
-export { default as Header } from "./NavSection";
+export { default as NavbarSection } from "./NavbarSection.tsx";

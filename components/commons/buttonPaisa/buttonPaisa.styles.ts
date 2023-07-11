@@ -36,6 +36,7 @@ export const ButtonContainer = styled.button`
     border-color: ${(props) => props.theme.colors.neutrals4};
     color: ${(props) => props.theme.colors.neutrals8};
     font-size: ${(props) => props.theme.size["1rem"]};
+    font-family: ${(props) => props.theme.fonts.DMsans};
     &:hover {
       background-color: ${(props) => props.theme.colors.neutrals1b};
     }
@@ -45,14 +46,17 @@ export const ButtonContainer = styled.button`
     border-color: ${(props) => props.theme.colors.primary1};
     color: ${(props) => props.theme.colors.neutrals8};
     font-size: ${(props) => props.theme.size["1rem"]};
+    font-family: ${(props) => props.theme.fonts.DMsans};
     &:hover {
       background-color: ${(props) => props.theme.colors.primary1b};
     }
   }
   &.galery-controls {
+    background-color: ${(props) => props.theme.colors.neutrals1};
     border-color: ${(props) => props.theme.colors.neutrals3};
     height: ${(props) => props.theme.size["2.5rem"]};
     width: ${(props) => props.theme.size["2.5rem"]};
+
     &:hover {
       background-color: ${(props) => props.theme.colors.neutrals1b};
       border-color: ${(props) => props.theme.colors.neutrals4};

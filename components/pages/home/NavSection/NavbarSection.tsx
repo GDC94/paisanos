@@ -1,15 +1,17 @@
 import { Container } from "layouts/mainLayout";
-import { HeaderContainer } from "./NavSection.styles";
-import { Header } from "components/commons/header";
+import { Header } from "components/header";
+import { NavSectionContainer } from "./NavbarSection.styles";
+
 
 const NavSection = () => {
   return (
-    <HeaderContainer>
+    <NavSectionContainer>
       <Container>
         <Header />
       </Container>
-    </HeaderContainer>
+    </NavSectionContainer>
   );
 };
 
 export default NavSection;
+
