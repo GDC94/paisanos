@@ -40,7 +40,7 @@ export const NavItemsContainer = styled.div`
   display: flex;
   align-items: center;
   padding-left: ${(props) => props.theme.size["2rem"]};
-  @media ${DEVICES.mobileM} {
+  @media ${DEVICES.mobileL} {
     display: none;
   }
 `;

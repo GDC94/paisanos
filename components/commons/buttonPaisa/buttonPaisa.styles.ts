@@ -73,11 +73,7 @@ export const ButtonContainer = styled.button`
     width: ${(props) => props.theme.size["2.5rem"]};
 
     &:hover {
-    
+      border-color: ${(props) => props.theme.colors.neutrals6};
     }
   }
-
-
-
-
 `;

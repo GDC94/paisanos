@@ -200,7 +200,7 @@ export const GlobalStyles = css`
     color: white;
     padding: env(safe-area-inset);
     body {
-      background-color: #e3fc7b;
+      background-color: #8900FA;
       overflow-x: hidden;
       * {
         box-sizing: border-box;
