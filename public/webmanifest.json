@@ -1,0 +1,15 @@
+{
+  "name": "German Derbes",
+  "short_name": "German Derbes",
+  "icons": [
+    {
+      "src": "/logo.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }
+   
+  ],
+  "theme_color": "#171717",
+  "background_color": "#171717",
+  "display": "standalone"
+}
