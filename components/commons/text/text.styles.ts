@@ -45,7 +45,8 @@ export const TextCommon = styled.div<TextPaisaProps>`
     props.theme.colors[props.color] ?? props.theme.colors.black};
 
   text-transform: ${(props) => (props.textTransform ? "uppercase" : "none")};
-  font-family: "Poppins", sans-serif;
+  font-family: ${(props) =>
+    props.isPoppins ? props.theme.fonts.Poppins : props.theme.fonts.DMsans};
   line-height: ${(props) =>
     props.lineHeight
       ? props.theme.size[props.lineHeight as keyof typeof props.theme.size]

@@ -19,7 +19,6 @@ export const Container = styled.div`
   width: 90%;
   max-width: 1640px;
   margin: 0 auto;
-  background-color: red;
   @media screen and (max-width: 1440px) {
     max-width: 78%;
   }

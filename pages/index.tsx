@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { MainLayout } from "layouts/mainLayout";
-import { Header } from "components/pages/home/header";
+import { Header } from "components/pages/home/NavSection";
 
 const Home = () => {
   return (

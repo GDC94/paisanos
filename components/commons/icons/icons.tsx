@@ -14,7 +14,7 @@ export const LogoPaisanos = (props: any) => {
   return (
     <svg
       {...props}
-      width='160'
+      width='178'
       height='32'
       viewBox='0 0 178 32'
       fill='none'
