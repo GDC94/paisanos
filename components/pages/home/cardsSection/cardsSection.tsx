@@ -1,6 +1,6 @@
 import { Container } from "layouts/mainLayout";
-import { CardsGridComponent } from "./cardsGridComponent";
-import { CardsFiltersComponent } from "./cardsFiltersComponent";
+import { CardsGridComponent } from "./components/cardsGridComponent";
+import { CardsFiltersComponent } from "./components/cardsFiltersComponent";
 import {
   CardSectionContent,
   CardsSectionContainer,

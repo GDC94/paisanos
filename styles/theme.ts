@@ -40,6 +40,7 @@ export const theming = {
   },
 
   size: {
+    "0.375rem": "0.375rem",
     "0.5rem": "0.5rem",
     "0.75rem": "0.75rem",
     "0.875rem": "0.875rem",
