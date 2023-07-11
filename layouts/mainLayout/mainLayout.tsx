@@ -7,7 +7,6 @@ import {
   GlobalStyles,
 } from "./mainLayout.styles";
 
-
 export interface MainLayoutProps {
   children?: React.ReactNode;
   full?: boolean;

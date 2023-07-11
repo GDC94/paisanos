@@ -29,7 +29,7 @@ export const ErrorPage = ({
   return (
     <MainLayout full>
       <Head>
-        <title>😨 Algo ha salido mal  </title>
+        <title>😨 Algo ha salido mal </title>
       </Head>
       <ErrorContainer>
         <ErrorNumberAndMessage>

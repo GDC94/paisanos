@@ -5,4 +5,3 @@ export const ErrorPage404 = () => {
 };
 
 export default ErrorPage404;
- 

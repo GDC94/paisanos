@@ -6,4 +6,3 @@ export { API_URLS, DATA_URL } from "./apiUrls";
 
 /* Queries */
 export { DEVICES } from "./queries";
-
