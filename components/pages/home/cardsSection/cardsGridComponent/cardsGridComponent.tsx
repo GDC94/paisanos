@@ -4,9 +4,9 @@ import { CardsGrid } from "./cardsGridComponent.styles";
 const CardsGridComponent = () => {
   return (
     <CardsGrid>
-      <CardNft />
-      <CardNft />
-      <CardNft />
+      {[...Array(3)]?.map((_, key: number) => {
+        return <CardNft key={key} />;
+      })}
     </CardsGrid>
   );
 };

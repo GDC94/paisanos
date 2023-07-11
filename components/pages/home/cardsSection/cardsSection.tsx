@@ -1,5 +1,5 @@
 import { Container } from "layouts/mainLayout";
-import { CardsGridComponent } from "./cardsGrid";
+import { CardsGridComponent } from "./cardsGridComponent";
 import { CardsSectionContainer } from "./cardsSection.styles";
 
 const cardsSection = () => {
