@@ -1,16 +1,12 @@
-import { ArrowDownIcon } from "../icons/icons";
-import { Sbtntext, SelectBtn, SelectMenu } from "./select.styles";
+
+import {
+
+} from "./select.styles";
 
 const Select = () => {
   return (
-    <SelectMenu>
-      <SelectBtn>
-        <Sbtntext>
-
-        </Sbtntext>
-        <ArrowDownIcon/>
-      </SelectBtn>
-    </SelectMenu>
+    <div></div>
+   
   );
 };
 

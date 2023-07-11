@@ -159,7 +159,22 @@ export const GlobalStyles = css`
     -webkit-tap-highlight-color: transparent;
   }
   select {
-    border: none;
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: var(--darkgray);
+    background-image: none;
+    cursor: pointer;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
   }
   input[type="button"],
   input[type="email"],

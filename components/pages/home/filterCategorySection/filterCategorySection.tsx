@@ -1,10 +1,9 @@
 import { Container } from "layouts/mainLayout";
-
+import { FilterTag } from "./components/filterTag";
 import {
   CategorySectionContainer,
   FiltersCategorySectionContent,
 } from "./filterCategorySection.styles";
-import { FilterTag } from "./components/filterTag";
 
 const FilterCategorySection = () => {
   return (
