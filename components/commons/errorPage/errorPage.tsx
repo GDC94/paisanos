@@ -23,13 +23,13 @@ interface ErrorPageProps {
 export const ErrorPage = ({
   statusCode,
   message,
-  textButton = "Run to the home, forest! run",
+  textButton = "Run to the home, Forest! ruuuuuun!!",
   linkButton = `${PATHS.ROOT}`,
 }: ErrorPageProps) => {
   return (
     <MainLayout full>
       <Head>
-        <title>😔 Something went wrong </title>
+        <title>😨 Algo ha salido mal  </title>
       </Head>
       <ErrorContainer>
         <ErrorNumberAndMessage>

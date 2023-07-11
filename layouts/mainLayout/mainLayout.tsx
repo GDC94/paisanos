@@ -1,12 +1,12 @@
 import React from "react";
 import { Global as GlobalStyling } from "@emotion/react";
-
+import { Footer } from "components/commons/footer";
 import {
   LayoutContainer,
   LayoutWrapper,
   GlobalStyles,
 } from "./mainLayout.styles";
-import { Footer } from "components/commons/footer";
+
 
 export interface MainLayoutProps {
   children?: React.ReactNode;

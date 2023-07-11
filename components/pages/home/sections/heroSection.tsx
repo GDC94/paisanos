@@ -6,7 +6,8 @@ const HeroSection = () => {
   return (
     <HeroContainer>
       <Container>
-       
+
+        esta es la pagina principal
       </Container>
     </HeroContainer>
   );
