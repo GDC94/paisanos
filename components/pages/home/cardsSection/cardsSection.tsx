@@ -1,12 +1,13 @@
 import { Container } from "layouts/mainLayout";
 import { CardsGridComponent } from "./cardsGridComponent";
+import { CardsFiltersComponent } from "./cardsFiltersComponent";
 import {
   CardSectionContent,
   CardsSectionContainer,
 } from "./cardsSection.styles";
-import { CardsFiltersComponent } from "./cardsFiltersComponent";
 
-const cardsSection = () => {
+
+const CardsSection = () => {
   return (
     <CardsSectionContainer>
       <Container>
@@ -19,4 +20,4 @@ const cardsSection = () => {
   );
 };
 
-export default cardsSection;
+export default CardsSection;

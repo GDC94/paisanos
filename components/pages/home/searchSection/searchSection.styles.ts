@@ -7,7 +7,6 @@ export const SearchSectionContainer = styled.section`
 `;
 
 export const SearchSectionContent = styled.div`
-  height: 40px;
   margin-bottom: ${(props) => props.theme.size["2rem"]};
   display: flex;
   justify-content: space-between;
