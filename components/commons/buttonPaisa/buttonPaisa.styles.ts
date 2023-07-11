@@ -67,6 +67,7 @@ export const ButtonContainer = styled.button`
   }
 
   &.search-button {
+    width: 40px;
     background-color: ${(props) => props.theme.colors.primary1};
     border-color: ${(props) => props.theme.colors.primary1};
     height: ${(props) => props.theme.size["2.5rem"]};

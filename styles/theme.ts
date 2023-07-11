@@ -31,6 +31,7 @@ export const theming = {
 
   transitions: {
     "0.3s": "all 0.3s cubic-bezier(.51,.92,.24,1.15);",
+    "0.4s": "0.4s",
     "0.6s": "0.6s",
   },
 

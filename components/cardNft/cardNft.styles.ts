@@ -135,6 +135,7 @@ export const FooterCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: ${(props) => props.theme.size["1.25rem"]};
 `;
 
 export const LeftContent = styled.div`
