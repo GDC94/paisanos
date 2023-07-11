@@ -63,4 +63,3 @@ export const WrapperAssetDetails = styled.div`
     width: 100%;
   }
 `;
-

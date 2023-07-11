@@ -24,7 +24,7 @@ export const InputSearch = styled.input`
   font-family: ${(props) => props.theme.fonts.Poppins};
   line-height: ${(props) => props.theme.size["2rem"]};
   letter-spacing: -0.24px;
-  border-radius: 20px ;
+  border-radius: 20px;
   &::placeholder {
     color: ${(props) => props.theme.colors.neutrals6};
   }

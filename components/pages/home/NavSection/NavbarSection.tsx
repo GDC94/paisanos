@@ -2,7 +2,6 @@ import { Container } from "layouts/mainLayout";
 import { Header } from "components/header";
 import { NavSectionContainer } from "./NavbarSection.styles";
 
-
 const NavSection = () => {
   return (
     <NavSectionContainer>
@@ -14,4 +13,3 @@ const NavSection = () => {
 };
 
 export default NavSection;
-

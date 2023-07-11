@@ -9,7 +9,6 @@ const FilterCategorySection = () => {
     <CategorySectionContainer>
       <Container>
         <FiltersCategorySectionContent>
-
           aca los filtros
         </FiltersCategorySectionContent>
       </Container>

@@ -6,7 +6,6 @@ import {
   CardsSectionContainer,
 } from "./cardsSection.styles";
 
-
 const CardsSection = () => {
   return (
     <CardsSectionContainer>
