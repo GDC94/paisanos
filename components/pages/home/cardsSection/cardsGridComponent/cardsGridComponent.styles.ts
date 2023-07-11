@@ -5,6 +5,6 @@ export const CardsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-columns: min-content;
-  column-gap: ${(props) => props.theme.size["1rem"]};
-  row-gap: ${(props) => props.theme.size["2.5rem"]};
+  column-gap: ${(props) => props.theme.size["2rem"]};
+  row-gap: ${(props) => props.theme.size["2rem"]};
 `;

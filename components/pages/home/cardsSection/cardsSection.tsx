@@ -1,12 +1,19 @@
 import { Container } from "layouts/mainLayout";
 import { CardsGridComponent } from "./cardsGridComponent";
-import { CardsSectionContainer } from "./cardsSection.styles";
+import {
+  CardSectionContent,
+  CardsSectionContainer,
+} from "./cardsSection.styles";
+import { CardsFiltersComponent } from "./cardsFiltersComponent";
 
 const cardsSection = () => {
   return (
     <CardsSectionContainer>
       <Container>
-        <CardsGridComponent />
+        <CardSectionContent>
+          <CardsFiltersComponent />
+          <CardsGridComponent />
+        </CardSectionContent>
       </Container>
     </CardsSectionContainer>
   );

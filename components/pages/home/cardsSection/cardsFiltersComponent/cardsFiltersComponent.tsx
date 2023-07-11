@@ -1,13 +1,10 @@
-import { Container } from "layouts/mainLayout";
-import { CardsSectionContainer } from "./cardsFiltersComponent.styles";
+import { CardsFiltersContainer } from "./cardsFiltersComponent.styles";
 
 const CardsFiltersComponent = () => {
   return (
-    <CardsSectionContainer>
-      <Container>
-       
-      </Container>
-    </CardsSectionContainer>
+    <CardsFiltersContainer>
+      
+    </CardsFiltersContainer>
   );
 };
 

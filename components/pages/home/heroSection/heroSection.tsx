@@ -32,7 +32,6 @@ const HeroSection = () => {
             <AssetDetails />
             <BidSummaryCard />
             <ButtonsAuction />
-
             <ButtonsGaleryControls />
           </WrapperAssetDetails>
         </MainContent>

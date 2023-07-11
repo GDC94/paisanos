@@ -65,4 +65,19 @@ export const ButtonContainer = styled.button`
   &.without-border {
     border-color: transparent;
   }
+
+  &.search-button {
+    background-color: ${(props) => props.theme.colors.primary1};
+    border-color: ${(props) => props.theme.colors.primary1};
+    height: ${(props) => props.theme.size["2.5rem"]};
+    width: ${(props) => props.theme.size["2.5rem"]};
+
+    &:hover {
+    
+    }
+  }
+
+
+
+
 `;
