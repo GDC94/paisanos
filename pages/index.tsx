@@ -1,7 +1,6 @@
 import Head from "next/head";
-
 import { MainLayout } from "layouts/mainLayout";
-import { HeroSection } from "components/pages/home/sections";
+import { Header } from "components/pages/home/header";
 
 
 const Home = () => {
@@ -10,7 +9,7 @@ const Home = () => {
       <Head>
         <title>NFPaisanos</title>
       </Head>
-      <HeroSection />
+      <Header />
     </MainLayout>
   );
 };

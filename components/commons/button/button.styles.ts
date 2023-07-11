@@ -46,7 +46,7 @@ export const ButtonWrapper = styled.button`
       svg {
         transform: rotate(45deg);
         path {
-          fill: ${(props) => props.theme.colors.primary};
+          fill: ${(props) => props.theme.colors.violet};
         }
       }
     }

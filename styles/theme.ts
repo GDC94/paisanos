@@ -7,6 +7,8 @@ export const theming = {
     grayDark: "#242424",
     black: "#000000",
     white: "#ffffff",
+    green: "#e3fc7b",
+    violet: "#b599f8",
 
     /*neutrals* */
     neutrals1: "#141416",

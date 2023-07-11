@@ -23,7 +23,7 @@ interface ErrorPageProps {
 export const ErrorPage = ({
   statusCode,
   message,
-  textButton = "Run to the home, Forest! ruuuuuun!!",
+  textButton = "Corre hacia la Home, Forest! corre!!",
   linkButton = `${PATHS.ROOT}`,
 }: ErrorPageProps) => {
   return (

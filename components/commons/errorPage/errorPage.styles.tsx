@@ -14,7 +14,7 @@ export const ButtonWrapper = styled.div`
 export const MessageLine = styled.div`
   width: 106%;
   height: 6px;
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.green};
   margin-top: 20px;
 `;
 
@@ -23,8 +23,9 @@ export const Message = styled.div`
   align-items: center;
   color: ${(props) => props.theme.colors.white};
   display: flex;
-  font-family: ${(props) => props.theme.fonts.SpaceMono};
-  font-size: 2.5rem;
+  font-family: ${(props) => props.theme.fonts.Poppins};
+  font-weight: ${(props) => props.theme.fontWeight[700]};
+  font-size: ${(props) => props.theme.size["2.5rem"]};
   flex-flow: column;
   text-align: center;
   justify-content: center;
@@ -51,7 +52,7 @@ export const Number = styled.div`
   color: ${(props) => props.theme.colors.grayDark};
   font-size: 10.625rem;
   text-align: center;
-  font-family: ${(props) => props.theme.fonts.SpaceMono};
+  font-family: ${(props) => props.theme.fonts.Poppins};
   font-weight: 700;
   z-index: 1;
   text-align: center;

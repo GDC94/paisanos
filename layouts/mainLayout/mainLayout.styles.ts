@@ -5,7 +5,7 @@ export const LayoutContainer = styled.div`
   width: 100%;
   height: auto;
   min-height: 100vh;
-  background-color: ${(props) => props.theme.colors.background};
+  background-color: ${(props) => props.theme.colors.neutrals1};
   overflow-x: hidden;
 `;
 
@@ -19,8 +19,9 @@ export const Container = styled.div`
   width: 90%;
   max-width: 1640px;
   margin: 0 auto;
+  background-color: red ;
   @media screen and (max-width: 1440px) {
-    max-width: 90%;
+    max-width: 78%;
   }
   &.align-center {
     height: 100%;
@@ -200,7 +201,7 @@ export const GlobalStyles = css`
     color: white;
     padding: env(safe-area-inset);
     body {
-      white-space: pre-line;
+      background-color: #e3fc7b;
       overflow-x: hidden;
       * {
         box-sizing: border-box;
