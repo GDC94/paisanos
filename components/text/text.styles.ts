@@ -18,7 +18,8 @@ export interface TextPaisaProps {
     | "neutrals5"
     | "neutrals6"
     | "neutrals7"
-    | "neutrals8";
+    | "neutrals8"
+    | "primary1";
   marginTop?: string;
   marginRight?: string;
   marginBottom?: string;

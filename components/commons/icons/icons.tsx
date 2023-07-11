@@ -192,7 +192,7 @@ export const SearchIcon = (props: any) => {
 export const ArrowDownIcon = (props: any) => {
   return (
     <svg
-    {...props}
+      {...props}
       width='10'
       height='6'
       viewBox='0 0 10 6'
@@ -204,6 +204,102 @@ export const ArrowDownIcon = (props: any) => {
         clip-rule='evenodd'
         d='M9.20711 0.792893C8.81658 0.402369 8.18342 0.402369 7.79289 0.792893L5 3.58579L2.20711 0.792893C1.81658 0.402369 1.18342 0.402369 0.792894 0.792893C0.402369 1.18342 0.402369 1.81658 0.792894 2.20711L4.29289 5.70711C4.68342 6.09763 5.31658 6.09763 5.70711 5.70711L9.20711 2.20711C9.59763 1.81658 9.59763 1.18342 9.20711 0.792893Z'
         fill='#777E91'
+      />
+    </svg>
+  );
+};
+
+export const AllColorsIcon = (props: any) => {
+  return (
+    <svg
+      {...props}
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+    >
+      <path
+        d='M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z'
+        stroke='#3772FF'
+        stroke-width='2'
+      />
+    </svg>
+  );
+};
+
+export const BlackIcon = (props: any) => {
+  return (
+    <svg
+      {...props}
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+    >
+      <circle cx='12' cy='12' r='10' fill='#141416' />
+    </svg>
+  );
+};
+
+export const GreenIcon = (props: any) => {
+  return (
+    <svg
+      {...props}
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+    >
+      <circle cx='12' cy='12' r='10' fill='#45B36B' />
+    </svg>
+  );
+};
+
+export const PinkIcon = (props: any) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+    >
+      <circle cx='12' cy='12' r='10' fill='#EF466F' />
+    </svg>
+  );
+};
+
+export const PurpleIcon = (props: any) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+    >
+      <circle cx='12' cy='12' r='10' fill='#9757D7' />
+    </svg>
+  );
+};
+
+export const ResetIcon = (props: any) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+    >
+      <path
+        fill-rule='evenodd'
+        clip-rule='evenodd'
+        d='M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22ZM9.70711 8.29289C9.31658 7.90237 8.68342 7.90237 8.29289 8.29289C7.90237 8.68342 7.90237 9.31658 8.29289 9.70711L10.5858 12L8.29289 14.2929C7.90237 14.6834 7.90237 15.3166 8.29289 15.7071C8.68342 16.0976 9.31658 16.0976 9.70711 15.7071L12 13.4142L14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071C16.0976 15.3166 16.0976 14.6834 15.7071 14.2929L13.4142 12L15.7071 9.70711C16.0976 9.31658 16.0976 8.68342 15.7071 8.29289C15.3166 7.90237 14.6834 7.90237 14.2929 8.29289L12 10.5858L9.70711 8.29289Z'
+        fill='#F4F5F6'
       />
     </svg>
   );
