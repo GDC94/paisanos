@@ -7,7 +7,7 @@ export const HeroContainer = styled.section`
   position: relative;
 `;
 
-export const FrontSectionContainer = styled.div`
+export const MainContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;

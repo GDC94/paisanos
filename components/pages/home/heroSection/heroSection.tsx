@@ -6,7 +6,7 @@ import { ButtonsAuction } from "components/buttonsAuction";
 import { ButtonsGaleryControls } from "components/buttonsGaleryControls";
 import {
   ContainerImg,
-  FrontSectionContainer,
+  MainContent,
   HeroContainer,
   WrapperAssetDetails,
   WrapperImage,
@@ -16,7 +16,7 @@ const HeroSection = () => {
   return (
     <HeroContainer>
       <Container>
-        <FrontSectionContainer>
+        <MainContent>
           <WrapperImage>
             <ContainerImg>
               <Image
@@ -35,7 +35,7 @@ const HeroSection = () => {
 
             <ButtonsGaleryControls />
           </WrapperAssetDetails>
-        </FrontSectionContainer>
+        </MainContent>
       </Container>
     </HeroContainer>
   );

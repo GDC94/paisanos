@@ -3,6 +3,7 @@ import { MainLayout } from "layouts/mainLayout";
 
 import { HeroSection } from "components/pages/home/heroSection";
 import { NavbarSection } from "components/pages/home/navSection";
+import { CardsSection } from "components/pages/home/cardsSection";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       </Head>
       <NavbarSection />
       <HeroSection />
+      <CardsSection />
     </MainLayout>
   );
 };
