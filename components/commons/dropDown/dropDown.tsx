@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { classes } from "utils";
 import { ArrowDownIcon } from "../icons/icons";
-import { Text } from "components/text";
+import { Text } from "components/commons/text";
 import {
   DropDownOptions,
   DropdownOptionsList,

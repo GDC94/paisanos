@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Text } from "../text";
+import { Text } from "../commons/text";
 import { ButtonPaisa } from "../commons/buttonPaisa";
 import {
   Divider,

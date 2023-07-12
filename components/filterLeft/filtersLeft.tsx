@@ -1,5 +1,5 @@
 import { Divider } from "components/commons/divider";
-import { Text } from "components/text";
+import { Text } from "components/commons/text";
 import { DropDownComponent } from "components/commons/dropDown";
 import { ResetIcon } from "components/commons/icons/icons";
 import {

@@ -1,4 +1,4 @@
-import classes from "../../utils/classes";
+import classes from "../../../utils/classes";
 import { TextCommon, TextPaisaProps } from "./text.styles";
 
 export interface TextProps extends TextPaisaProps {

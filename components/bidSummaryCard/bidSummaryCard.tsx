@@ -1,4 +1,4 @@
-import { Text } from "components/text";
+import { Text } from "components/commons/text";
 import {
   AuctionContent,
   AuctionItem,

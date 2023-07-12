@@ -5,7 +5,7 @@ import {
   WrapperFooterTop,
 } from "./footer.styles";
 import { LogoPaisanos } from "../icons/icons";
-import { Text } from "../../text";
+import { Text } from "../text";
 
 export const Footer = () => {
   return (
