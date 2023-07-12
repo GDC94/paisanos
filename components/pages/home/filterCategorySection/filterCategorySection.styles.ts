@@ -25,6 +25,8 @@ export const FiltersCategorySectionContent = styled.div`
 export const FiltersContent = styled.div`
   width: 100%;
   display: flex;
+  border-top: 1px solid ${(props) => props.theme.colors.neutrals3};
+  border-top-left-radius: ${(props) => props.theme.size["0.75rem"]};
   justify-content: space-between;
   align-items: center;
   @media ${DEVICES.tablet} {
