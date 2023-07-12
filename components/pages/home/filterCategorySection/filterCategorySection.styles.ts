@@ -14,3 +14,9 @@ export const FiltersCategorySectionContent = styled.div`
   align-items: center;
   gap: ${(props) => props.theme.size["0.75rem"]};
 `;
+
+export const FiltersContent = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;

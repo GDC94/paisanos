@@ -1,7 +1,7 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { classes } from "utils";
 import { ArrowDownIcon } from "../icons/icons";
-
+import { Text } from "components/text";
 import {
   DropDownOptions,
   DropdownOptionsList,
@@ -9,60 +9,53 @@ import {
   DropItem,
   IconChevronDownWrapper,
   Item,
-  LinkItem,
   SingleOption,
 } from "./dropDown.styles";
 
 type ItemProps = {
-  content: string;
-  link?: string;
+  text: string;
+  icon?: JSX.Element;
 };
 
 interface DropDownComponentProps {
   items: {
-    content: string;
-    link?: string;
+    text: string;
+    icon?: JSX.Element;
   }[];
   defaultOptionValue?: string;
 }
 
-export const DropDownComponent = ({ items }: DropDownComponentProps) => {
+export const DropDownComponent = ({
+  items,
+  defaultOptionValue = "",
+}: DropDownComponentProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-
-  const closeMenu = useRef(null);
-
+  const [value, setValue] = useState<string>(defaultOptionValue);
   return (
     <DropDownWrapper>
       <IconChevronDownWrapper onClick={() => setIsVisible(!isVisible)}>
-        hola
+        <Text text={value} color={"neutrals7"} />
         <ArrowDownIcon />
       </IconChevronDownWrapper>
+
       <DropDownOptions className={classes({ show: isVisible })}>
-        <DropdownOptionsList ref={closeMenu}>
-          {items?.map((item: ItemProps, k: number) => {
-            return item?.link ? (
-              <LinkItem
-                href={item?.link}
-                key={k}
-                onClick={() => setIsVisible(false)}
-              >
-                <DropItem>
-                  <SingleOption>{item?.content}</SingleOption>
-                </DropItem>
-              </LinkItem>
-            ) : (
-              <Item
-                key={k}
-                onClick={() => {
-                  setIsVisible(false);
-                }}
-              >
-                <DropItem>
-                  <SingleOption>{item?.content}</SingleOption>
-                </DropItem>
-              </Item>
-            );
-          })}
+        <DropdownOptionsList>
+          {items?.map((item: ItemProps, k: number) => (
+            <Item
+              key={k}
+              onClick={() => {
+                setIsVisible(false);
+                setValue(item?.text);
+              }}
+            >
+              <DropItem>
+                <SingleOption>
+                  {item.icon}
+                  {item.text}
+                </SingleOption>
+              </DropItem>
+            </Item>
+          ))}
         </DropdownOptionsList>
       </DropDownOptions>
     </DropDownWrapper>

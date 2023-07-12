@@ -53,9 +53,21 @@ export const ButtonContainer = styled.button`
   }
   &.galery-controls {
     background-color: ${(props) => props.theme.colors.neutrals1};
-    border-color: ${(props) => props.theme.colors.neutrals3};
-    height: ${(props) => props.theme.size["2.5rem"]};
-    width: ${(props) => props.theme.size["2.5rem"]};
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: 0;
+
+    svg {
+      padding: 10px;
+      border: 2px solid ${(props) => props.theme.colors.neutrals3};
+      border-radius: 100%;
+      width: 44px;
+      height: 44px;
+      path {
+        fill: ${(props) => props.theme.colors.neutrals4};
+      }
+    }
 
     &:hover {
       background-color: ${(props) => props.theme.colors.neutrals1b};
@@ -63,15 +75,32 @@ export const ButtonContainer = styled.button`
     }
   }
   &.without-border {
-    border-color: transparent;
+    svg {
+      padding: 10px;
+      border: 2px solid transparent;
+      border-radius: 100%;
+      width: 44px;
+      height: 44px;
+      path {
+        fill: ${(props) => props.theme.colors.neutrals4};
+      }
+    }
   }
 
   &.search-button {
-    width: 40px;
     background-color: ${(props) => props.theme.colors.primary1};
     border-color: ${(props) => props.theme.colors.primary1};
-    height: ${(props) => props.theme.size["2.5rem"]};
-    width: ${(props) => props.theme.size["2.5rem"]};
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: 2px solid transparent;
+
+    svg {
+      padding: 10px;
+      border-radius: 100%;
+      width: 38px;
+      height: 38px;
+    }
 
     &:hover {
       border-color: ${(props) => props.theme.colors.neutrals6};

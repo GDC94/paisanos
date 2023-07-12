@@ -1,27 +1,49 @@
-import { Text } from "components/text";
-import {
-  FilterContainer,
-  ItemColorFilter,
-  ResetFiltersContent,
-} from "./filterByColors.styles";
-import {
-  AllColorsIcon,
-  BlackIcon,
-  GreenIcon,
-  PinkIcon,
-  PurpleIcon,
-  ResetIcon,
-} from "components/commons/icons/icons";
-import { classes } from "utils";
 import { Divider } from "components/commons/divider";
+import { Text } from "components/text";
+import { DropDownComponent } from "components/commons/dropDown";
+import { ResetIcon } from "components/commons/icons/icons";
+import {
+  DropContentColors,
+  DropContentMostLiked,
+  ResetFiltersContent,
+} from "./filtersLeft.styles";
 
-interface FilterByColorsProps {
-  backgroundBlack: boolean;
-}
-
-const FilterByColors = ({ backgroundBlack }: FilterByColorsProps) => (
+const FiltersLeft = () => (
   <>
-    <FilterContainer>
+    <Divider />
+    <DropContentMostLiked>
+      <Text
+        text='likes'
+        size='0.75rem'
+        color='neutrals5'
+        isPoppins
+        lineHeight='0.75rem'
+        textTransform='upper'
+        marginBottom='0.75rem'
+      />
+      <DropDownComponent
+        defaultOptionValue='Most Liked'
+        items={[{ text: "kemdkmed" }]}
+      />
+    </DropContentMostLiked>
+
+    <DropContentColors>
+      <Text
+        text='colors'
+        size='0.75rem'
+        color='neutrals5'
+        isPoppins
+        lineHeight='0.75rem'
+        textTransform='upper'
+        marginBottom='0.75rem'
+      />
+      <DropDownComponent
+        defaultOptionValue='colors'
+        items={[{ text: "kemdkmed" }]}
+      />
+    </DropContentColors>
+    {/*
+       <FilterContainer>
       <ItemColorFilter>
         <AllColorsIcon />
         <Text
@@ -45,7 +67,7 @@ const FilterByColors = ({ backgroundBlack }: FilterByColorsProps) => (
           isPoppins
         />
       </ItemColorFilter>
-      <ItemColorFilter className={classes({ backgroundBlack })}>
+      <ItemColorFilter >
         <GreenIcon />
         <Text
           text={"Green"}
@@ -81,6 +103,8 @@ const FilterByColors = ({ backgroundBlack }: FilterByColorsProps) => (
         />
       </ItemColorFilter>
     </FilterContainer>
+   */}
+
     <Divider />
     <ResetFiltersContent>
       <ResetIcon />
@@ -94,4 +118,4 @@ const FilterByColors = ({ backgroundBlack }: FilterByColorsProps) => (
     </ResetFiltersContent>
   </>
 );
-export default FilterByColors;
+export default FiltersLeft;

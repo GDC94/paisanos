@@ -1,10 +1,10 @@
-import FilterByColors from "components/filterByColors/filterByColors";
+import { FiltersLeft } from "components/filterLeft";
 import { CardsFiltersContainer } from "./cardsFiltersComponent.styles";
 
 const CardsFiltersComponent = () => {
   return (
     <CardsFiltersContainer>
-      <FilterByColors backgroundBlack={true} />
+      <FiltersLeft />
     </CardsFiltersContainer>
   );
 };

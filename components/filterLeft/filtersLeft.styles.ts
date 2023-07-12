@@ -1,5 +1,13 @@
 import styled from "@emotion/styled";
-import { DEVICES } from "config";
+
+export const DropContentMostLiked = styled.div`
+  width: 256px;
+  margin-bottom: ${(props) => props.theme.size["1.5rem"]};
+`;
+export const DropContentColors = styled.div`
+  width: 256px;
+  margin-bottom: 20rem;
+`;
 
 export const FilterContainer = styled.div`
   width: 256px;
@@ -10,7 +18,6 @@ export const FilterContainer = styled.div`
   background-color: ${(props) => props.theme.colors.neutrals2};
   border-radius: ${(props) => props.theme.size["0.75rem"]};
   padding: ${(props) => props.theme.size["0.5rem"]};
-  margin-bottom: ${(props) => props.theme.size["1.5rem"]};
 `;
 
 export const ItemColorFilter = styled.div`
@@ -29,7 +36,6 @@ export const ItemColorFilter = styled.div`
   }
 `;
 
-
 export const ResetFiltersContent = styled.div`
   display: flex;
   justify-content: flex-start;
@@ -41,6 +47,5 @@ export const ResetFiltersContent = styled.div`
   background-color: transparent;
   cursor: pointer;
   &:hover {
-  
   }
 `;
