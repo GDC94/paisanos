@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { InputRange } from "components/commons/inputRange";
 import { Text } from "components/commons/text";
 import { Divider } from "components/commons/divider";
 import { DropDownComponent } from "components/commons/dropDown";
@@ -11,6 +13,15 @@ import {
 } from "./columnFiltersComponent.styles";
 
 const ColumnFiltersComponent = () => {
+  const [value, setValue] = useState("");
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+
+  console.log(value);
+
+  const min = "0";
+  const max = "10";
   return (
     <CardsFiltersContainer>
       <RangeFilterContent>
@@ -22,6 +33,14 @@ const ColumnFiltersComponent = () => {
           lineHeight='0.75rem'
           textTransform='upper'
           marginBottom='0.75rem'
+        />
+
+        <InputRange
+          value={"fl,l,lf,"}
+          handleChange={handleChange}
+          min={min}
+          max={max}
+          step={"dddd"}
         />
       </RangeFilterContent>
       <Divider />

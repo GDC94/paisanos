@@ -9,10 +9,7 @@ export const CardsFiltersContainer = styled.div`
   transition-duration: 0.4s;
 `;
 
-export const RangeFilterContent = styled.div`
-  height: 76px;
-  background-color: ${(props) => props.theme.colors.neutrals2};
-`;
+export const RangeFilterContent = styled.div``;
 
 export const DropContentMostLiked = styled.div`
   width: 256px;

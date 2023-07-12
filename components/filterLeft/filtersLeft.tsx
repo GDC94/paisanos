@@ -21,9 +21,6 @@ const FiltersLeft = () => (
         textTransform='upper'
         marginBottom='0.75rem'
       />
-
-
-
     </RangeFilterContent>
     <Divider />
     <DropContentMostLiked>
