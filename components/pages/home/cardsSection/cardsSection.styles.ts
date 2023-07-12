@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { DEVICES } from "config";
 
 export const CardsSectionContainer = styled.section`
   width: 100%;
@@ -12,4 +13,8 @@ export const CardSectionContent = styled.div`
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+  @media ${DEVICES.tablet} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;

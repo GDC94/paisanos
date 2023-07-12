@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { DEVICES } from "config";
 
 export const CardsGrid = styled.div`
   width: 100%;
@@ -7,4 +8,11 @@ export const CardsGrid = styled.div`
   grid-auto-columns: min-content;
   column-gap: ${(props) => props.theme.size["2rem"]};
   row-gap: ${(props) => props.theme.size["2rem"]};
+
+  @media ${DEVICES.tablet} {
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `;

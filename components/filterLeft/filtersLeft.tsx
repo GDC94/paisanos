@@ -5,11 +5,23 @@ import { ResetIcon } from "components/commons/icons/icons";
 import {
   DropContentColors,
   DropContentMostLiked,
+  RangeFilterContent,
   ResetFiltersContent,
 } from "./filtersLeft.styles";
 
 const FiltersLeft = () => (
   <>
+    <RangeFilterContent>
+      <Text
+        text='price range'
+        size='0.75rem'
+        color='neutrals5'
+        isPoppins
+        lineHeight='0.75rem'
+        textTransform='upper'
+        marginBottom='0.75rem'
+      />
+    </RangeFilterContent>
     <Divider />
     <DropContentMostLiked>
       <Text

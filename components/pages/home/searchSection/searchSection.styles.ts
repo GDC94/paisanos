@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { DEVICES } from "config";
 
 export const SearchSectionContainer = styled.section`
   width: 100%;
@@ -27,5 +28,8 @@ export const InputSearch = styled.input`
   border-radius: 20px;
   &::placeholder {
     color: ${(props) => props.theme.colors.neutrals6};
+  }
+  @media ${DEVICES.tablet} {
+    font-size: ${(props) => props.theme.size["1rem"]};
   }
 `;

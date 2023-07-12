@@ -172,10 +172,10 @@ export const SearchIcon = (props: any) => {
       <path
         d='M14.6667 14.6667L10.4373 10.4374'
         stroke='#FCFCFD'
-        stroke-width='2'
-        stroke-miterlimit='10'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='2'
+        strokeMiterlimit='10'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
       <path
         d='M6.66668 12C9.6122 12 12 9.61223 12 6.66671C12 3.72119 9.6122 1.33337 6.66668 1.33337C3.72116 1.33337 1.33334 3.72119 1.33334 6.66671C1.33334 9.61223 3.72116 12 6.66668 12Z'
