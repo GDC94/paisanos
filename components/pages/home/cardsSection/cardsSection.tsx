@@ -1,6 +1,6 @@
 import { Container } from "layouts/mainLayout";
 import { CardsGridComponent } from "./components/cardsGridComponent";
-import { CardsFiltersComponent } from "./components/cardsFiltersComponent";
+import { ColumnFiltersComponent } from "./components/cardsFiltersComponent";
 import {
   CardSectionContent,
   CardsSectionContainer,
@@ -11,7 +11,7 @@ const CardsSection = () => {
     <CardsSectionContainer>
       <Container>
         <CardSectionContent>
-          <CardsFiltersComponent />
+          <ColumnFiltersComponent />
           <CardsGridComponent />
         </CardSectionContent>
       </Container>

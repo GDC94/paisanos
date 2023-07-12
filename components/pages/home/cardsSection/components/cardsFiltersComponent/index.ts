@@ -1,1 +1,1 @@
-export { default as CardsFiltersComponent } from "./cardsFiltersComponent";
+export { default as ColumnFiltersComponent } from "./columnFiltersComponent";
