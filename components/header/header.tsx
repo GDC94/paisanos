@@ -15,7 +15,7 @@ const Header = () => {
 
   const {userKey} = useGetUserKey();
 
-  if(userKey) return <h2>TENEMOS USER KEY</h2>
+  if(!userKey) return;
   return (
     <HeaderContainer>
       <HeaderContentLeft>
