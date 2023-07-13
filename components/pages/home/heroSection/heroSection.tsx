@@ -3,6 +3,7 @@ import { Container } from "layouts/mainLayout";
 import { BidSummaryCard } from "components/bidSummaryCard";
 import { AssetDetails } from "components/assetDetails";
 import { ButtonsAuction } from "components/buttonsAuction";
+import AunctionTimeInfo from "components/aunctionTimeInfo/aunctionTimeInfo";
 import { ButtonsGaleryControls } from "components/buttonsGaleryControls";
 import {
   ContainerImg,
@@ -10,6 +11,7 @@ import {
   HeroContainer,
   WrapperAssetDetails,
   WrapperImage,
+  SummaryContainer,
 } from "./heroSection.styles";
 import { ethPriceData } from "data";
 
@@ -31,7 +33,10 @@ const HeroSection = () => {
           </WrapperImage>
           <WrapperAssetDetails>
             <AssetDetails />
-            <BidSummaryCard ethInformation={ethPriceData} />
+            <SummaryContainer>
+              <BidSummaryCard ethInformation={ethPriceData} />
+              <AunctionTimeInfo />
+            </SummaryContainer>
             <ButtonsAuction />
             <ButtonsGaleryControls />
           </WrapperAssetDetails>

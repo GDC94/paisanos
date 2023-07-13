@@ -63,3 +63,13 @@ export const WrapperAssetDetails = styled.div`
     width: 100%;
   }
 `;
+export const SummaryContainer = styled.div`
+  border-radius: ${(props) => props.theme.size["2rem"]};
+  background-color: ${(props) => props.theme.colors.neutrals2};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: ${(props) => props.theme.size["2.5rem"]};
+  margin-top: ${(props) => props.theme.size["2.5rem"]};
+  margin-bottom: ${(props) => props.theme.size["2.5rem"]};
+`;

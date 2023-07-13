@@ -1,18 +1,12 @@
-//ETH price
-
 export interface EthPriceInfo {
   eth: string;
   usd: string;
 }
 
-// Post Obtains API KEY
-
 export interface PostApiKey {
   message: string;
   key: string;
 }
-
-//Aunctions
 
 export interface NFPAISANO {
   id: number;
@@ -48,3 +42,5 @@ export enum Type {
   Art = "Art",
   Photography = "Photography",
 }
+
+
