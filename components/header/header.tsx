@@ -9,12 +9,8 @@ import {
   LogoContainer,
   NavItemsContainer,
 } from "./header.styles";
-import { useChallengeState } from "context/challengeContext";
 
 const Header = () => {
-  const { challengeState } = useChallengeState();
-  console.log(challengeState);
-
   return (
     <HeaderContainer>
       <HeaderContentLeft>
