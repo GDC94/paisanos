@@ -1,4 +1,4 @@
-import { EthPrice, NFPAISANO } from "typings/responses";
+import { EthPriceInfo, NFPAISANO } from "typings/responses";
 
 export const dataPopular: NFPAISANO[] = [
   {
@@ -120,7 +120,7 @@ export const dataPopular: NFPAISANO[] = [
   },
 ];
 
-export const ethPriceData: EthPrice = {
+export const ethPriceData: EthPriceInfo = {
   eth: "1.00",
   usd: "1,133.52",
 };

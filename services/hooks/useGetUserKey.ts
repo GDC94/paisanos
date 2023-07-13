@@ -1,7 +1,6 @@
 import useSWR from "swr";
 /*
-const fetcher = async (url: string) => {
-  const requestOptions = {
+const fetcher = async (url: string) => { const requestOptions = {
     method: "GET",
     headers: {
       apiKey: "byy2ExX/rnaFuvDXdPOTOjJEQnzYsSJeKVWvP7viU1k=",

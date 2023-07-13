@@ -1,6 +1,6 @@
 //ETH price
 
-export interface EthPrice {
+export interface EthPriceInfo {
   eth: string;
   usd: string;
 }

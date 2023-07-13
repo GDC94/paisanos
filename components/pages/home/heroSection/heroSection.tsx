@@ -11,11 +11,9 @@ import {
   WrapperAssetDetails,
   WrapperImage,
 } from "./heroSection.styles";
-import { dataPopular } from "data";
+import { ethPriceData } from "data";
 
 const HeroSection = () => {
-  console.log(dataPopular);
-
   return (
     <HeroContainer>
       <Container>
@@ -33,7 +31,7 @@ const HeroSection = () => {
           </WrapperImage>
           <WrapperAssetDetails>
             <AssetDetails />
-            <BidSummaryCard />
+            <BidSummaryCard ethInformation={ethPriceData} />
             <ButtonsAuction />
             <ButtonsGaleryControls />
           </WrapperAssetDetails>

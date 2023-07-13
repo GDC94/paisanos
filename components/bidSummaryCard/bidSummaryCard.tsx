@@ -6,8 +6,13 @@ import {
   BidContent,
   SummaryContainer,
 } from "./bidSummaryCard.styles";
+import { EthPriceInfo } from "typings/responses";
 
-const BidSummaryCard = () => {
+interface BidSummaryCardProps {
+  ethInformation: EthPriceInfo;
+}
+
+const BidSummaryCard = ({ ethInformation }: BidSummaryCardProps) => {
   return (
     <SummaryContainer>
       <BidContent>
@@ -21,7 +26,7 @@ const BidSummaryCard = () => {
         />
         <Text
           color='neutrals8'
-          text={"1.00 ETH"}
+          text={`${ethInformation?.eth} ETH`}
           size='3rem'
           lineHeight='3.5rem'
           textTransform='upper'
@@ -29,7 +34,7 @@ const BidSummaryCard = () => {
         />
         <Text
           color='neutrals4'
-          text={"$3,618.36"}
+          text={`$ ${ethInformation?.usd}`}
           size='1.5rem'
           lineHeight='2rem'
           fontWeight={600}
