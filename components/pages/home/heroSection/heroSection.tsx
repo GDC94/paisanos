@@ -16,6 +16,10 @@ import {
 import { ethPriceData } from "data";
 
 const HeroSection = () => {
+
+
+
+  
   return (
     <HeroContainer>
       <Container>

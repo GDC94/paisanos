@@ -29,14 +29,17 @@ export interface NFPAISANO {
     color: string;
     type: string;
   };
-  bidUsers: BidUser[];
+  bidUsers: SingleBidUser[]
 }
 
-export interface BidUser {
+export interface SingleBidUser {
   id: number;
   name: string;
   avatar: string;
+
 }
+
+
 
 export enum Type {
   Art = "Art",
