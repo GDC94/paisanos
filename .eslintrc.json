@@ -17,7 +17,7 @@
     ],
     "@typescript-eslint/ban-types": "off",
     "no-console": ["warn"],
-   
+
     "valid-jsdoc": "off"
   }
 }

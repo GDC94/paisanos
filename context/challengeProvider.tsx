@@ -1,8 +1,5 @@
 import React, { useMemo, useReducer } from "react";
-
 import { challengeInitialState } from "./initialValue";
-
-import useGetUserKey from "services/hooks/useGetUserKey";
 import challengeReducer from "reducer/challengeReducer";
 import ChallengeContext from "./challengeContext";
 
@@ -15,8 +12,9 @@ const ChallengeProvider = ({ children }: UserProviderProps) => {
     challengeReducer,
     challengeInitialState,
   );
-  const { userKey } = useGetUserKey();
+  /* const { userKey } = useGetUserKey(); */
 
+  const userKey = "aca va la user key";
   const challengeState = useMemo(() => {
     const userData = {
       challengeState: {

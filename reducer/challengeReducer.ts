@@ -7,7 +7,10 @@ export type Action =
   | { type: "filter by range" }
   | { type: "filter by category" };
 
-const challengeReducer = (stateChallenge: ChallengeState, action: Action): ChallengeState => {
+const challengeReducer = (
+  stateChallenge: ChallengeState,
+  action: Action,
+): ChallengeState => {
   switch (action.type) {
     case "reset challenge state": {
       return { ...challengeInitialState };

@@ -2,7 +2,6 @@ import styled from "@emotion/styled";
 
 export const RangeFilterContent = styled.div`
   height: 76px;
-
 `;
 
 export const DropContentMostLiked = styled.div`

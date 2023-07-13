@@ -1,4 +1,5 @@
 // USER STATE
 export interface ChallengeState {
-    message: string;
-  }
+  message: string;
+  userKey?: string;
+}

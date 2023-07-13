@@ -1,4 +1,3 @@
-
 import useSWR from "swr";
 /*
 const fetcher = async (url: string) => {
@@ -14,7 +13,6 @@ const fetcher = async (url: string) => {
 
 */
 
-
 export const useGetUserKey = () => {
   let fetcher;
   const API_URL =
@@ -23,7 +21,6 @@ export const useGetUserKey = () => {
   const { data, error, ...rest } = useSWR(API_URL, fetcher);
 
   return { userKey: data, error, ...rest };
-  
 };
 
 export default useGetUserKey;

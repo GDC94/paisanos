@@ -6,5 +6,3 @@ export const API_URLS = {
 export const DATA_URL = {
   PROJECTS: `${process.env.NEXT_PUBLIC_BASE_SITE_URL}/data/projects.json`,
 };
-
-
