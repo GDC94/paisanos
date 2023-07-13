@@ -1,15 +1,16 @@
-import useSWRWrapper from "components/libs/swr/useSWRWrapper";
-import { fetcherGet } from "fetchers";
+import axios from "axios";
+import useSWR from "swr";
 
+import { FetcherProps } from "typings/requests";
+
+const fetcherGet = async (url: FetcherProps["url"]) => {
+  return await axios.get(url).then((res) => res.data);
+};
 export const usePrueba = () => {
   const API_URL = "https://fakestoreapi.com/products";
 
-  const { data, error, ...rest } = useSWRWrapper({
-    key: API_URL,
-    fetcher: async () => fetcherGet(API_URL),
-  });
-
-  return { data: data, error, ...rest };
+  const { data, error, ...rest } = useSWR(API_URL, fetcherGet);
+  return { data, error, ...rest };
 };
 
 export default usePrueba;

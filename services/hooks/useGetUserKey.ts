@@ -1,8 +1,8 @@
-import useSWRWrapper from "components/libs/swr/useSWRWrapper";
+import axios from "axios";
+import useSWR from "swr";
 import BASE_URL from "config/baseUrl";
-import { fetcherPost } from "fetchers";
 import { getUrlLogin } from "services/urls";
-import { bodyRequestApiKey } from "typings/requests";
+import { FetcherProps, bodyRequestApiKey } from "typings/requests";
 import { PostApiKeyResponse } from "typings/responses";
 
 /**
@@ -12,13 +12,18 @@ import { PostApiKeyResponse } from "typings/responses";
 
 const useGetUserKey = () => {
   const API_URL = getUrlLogin(BASE_URL);
-  const BODY: bodyRequestApiKey = {
+  const body: bodyRequestApiKey = {
     nombre: "German",
     email: "german@challengepaisanos.com",
   };
-  const { data, error, ...rest } = useSWRWrapper<PostApiKeyResponse>({
-    key: API_URL,
-    fetcher: async () => fetcherPost(API_URL, BODY),
+
+  const fetcherPost = async (url: FetcherProps["url"]) => {
+    return await axios.post(url, body).then((res) => res.data);
+  };
+
+  const { data, error, ...rest } = useSWR<PostApiKeyResponse>({
+    API_URL,
+    fetcherPost,
   });
 
   return { userKey: data?.key, welcomeMessage: data?.message, error, ...rest };

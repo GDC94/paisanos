@@ -1,8 +1,9 @@
-import useSWRWrapper from "components/libs/swr/useSWRWrapper";
+import useSWR from "swr";
+import axios from "axios";
 import BASE_URL from "config/baseUrl";
 import { useChallengeState } from "context/challengeContext";
-import { fetcherGet } from "fetchers";
 import { getUrlMostPopularAunctions } from "services/urls";
+import { FetcherProps } from "typings/requests";
 import { NFPAISANO } from "typings/responses";
 
 /**
@@ -20,9 +21,13 @@ const useGetMostPopularAunctions = () => {
       apiKey: userKey,
     },
   };
-  const { data, error, ...rest } = useSWRWrapper<NFPAISANO[]>({
-    key: API_URL,
-    fetcher: async () => fetcherGet(API_URL, config),
+
+  const fetcherGet = async (url: FetcherProps["url"]) => {
+    return await axios.get(url, config).then((res) => res.data);
+  };
+  const { data, error, ...rest } = useSWR<NFPAISANO[]>({
+    API_URL,
+    fetcherGet,
   });
 
   return { mostPopularAunctions: data, error, ...rest };

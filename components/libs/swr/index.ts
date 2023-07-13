@@ -1,1 +1,1 @@
-export { default as useSWRImmutableWrapper } from "./useSWRImmutableWrapper";
+export { default as useSWRWrapper } from "./useSWRWrapper";
