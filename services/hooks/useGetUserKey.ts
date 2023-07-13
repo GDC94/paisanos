@@ -2,7 +2,7 @@ import axios from "axios";
 import useSWR from "swr";
 import BASE_URL from "config/baseUrl";
 import { getUrlLogin } from "services/urls";
-import { bodyRequestApiKey } from "typings/requests";
+import { FetcherProps, bodyRequestApiKey } from "typings/requests";
 import { PostApiKeyResponse } from "typings/responses";
 
 /**
@@ -12,21 +12,22 @@ import { PostApiKeyResponse } from "typings/responses";
 
 const useGetUserKey = () => {
   const API_URL = getUrlLogin(BASE_URL);
-  
-  const body: bodyRequestApiKey = {
+
+  const bodyReq: bodyRequestApiKey = {
     nombre: "German",
     email: "german@challengepaisanos.com",
   };
 
-  const fetcherPost = async () => {
-    return await axios.post(API_URL, body).then((res) => res.data);
+  const fetcherPost = async (
+    url: FetcherProps["url"],
+    body: FetcherProps["body"],
+  ) => {
+    return await axios.post(url, body).then((res) => res.data);
   };
 
-  const { data, error, ...rest } = useSWR<PostApiKeyResponse>({
-    API_URL,
-    fetcherPost,
-  });
-
+  const { data, error, ...rest } = useSWR(API_URL, () =>
+    fetcherPost(API_URL, bodyReq),
+  );
   return { userKey: data?.key, welcomeMessage: data?.message, error, ...rest };
 };
 

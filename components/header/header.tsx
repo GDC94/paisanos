@@ -15,6 +15,8 @@ const Header = () => {
 
   const {userKey} = useGetUserKey();
 
+  
+
   if(!userKey) return <h2>No hay header</h2>;
   return (
     <HeaderContainer>
