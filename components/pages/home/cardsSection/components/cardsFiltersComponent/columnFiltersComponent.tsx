@@ -18,9 +18,7 @@ const ColumnFiltersComponent = () => {
     setValue(e.target.value);
   };
 
-  console.log(value);
-
-  const min = "0";
+  const min = value;
   const max = "10";
   return (
     <CardsFiltersContainer>

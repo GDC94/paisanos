@@ -25,13 +25,11 @@ export interface AdaptedNFPaisanosData {
     color: string;
     type: string;
   };
-  bidUsers: SingleBidUser[],
+  bidUsers: SingleBidUser[];
 }
 
-
 export interface SingleBidUser {
-    id: number;
-    name: string;
-    avatar: string;
-
+  id: number;
+  name: string;
+  avatar: string;
 }

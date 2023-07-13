@@ -7,4 +7,3 @@ export const BidContent = styled.div`
   align-items: center;
   margin-bottom: ${(props) => props.theme.size["1.5rem"]};
 `;
-
