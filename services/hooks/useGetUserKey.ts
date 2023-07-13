@@ -1,6 +1,6 @@
 import useSWRWrapper from "components/libs/swr/useSWRWrapper";
 import BASE_URL from "config/baseUrl";
-import { fetcherPost } from "fetchers/fetcherPost";
+import { fetcherPost } from "fetchers";
 import { getUrlLogin } from "services/urls";
 import { bodyRequestApiKey } from "typings/requests";
 import { PostApiKeyResponse } from "typings/responses";
@@ -11,7 +11,7 @@ import { PostApiKeyResponse } from "typings/responses";
  * @returns a user key
  */
 
-export const useGetUserKey = () => {
+const useGetUserKey = () => {
   const API_URL = getUrlLogin(BASE_URL);
   const BODY: bodyRequestApiKey = {
     nombre: "German",

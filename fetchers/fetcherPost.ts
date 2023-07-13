@@ -9,9 +9,11 @@ import { FetcherProps } from "typings/requests";
  * @return Promise
  */
 
-export const fetcherPost = async (
+const fetcherPost = async (
   url: FetcherProps["url"],
   body: FetcherProps["body"],
 ) => {
   return await axios.post(url, body).then((res) => res.data);
 };
+
+export default fetcherPost;

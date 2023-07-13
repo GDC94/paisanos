@@ -1,6 +1,6 @@
 import React, { useMemo, useReducer } from "react";
 import { challengeInitialState } from "./initialValue";
-import challengeReducer from "reducer/challengeReducer";
+import challengeReducer from "reducers/challengeReducer";
 import ChallengeContext from "./challengeContext";
 
 type UserProviderProps = {

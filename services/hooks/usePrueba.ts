@@ -1,5 +1,5 @@
 import useSWRWrapper from "components/libs/swr/useSWRWrapper";
-import { fetcherGet } from "fetchers/fetcherGet";
+import { fetcherGet } from "fetchers";
 
 export const usePrueba = () => {
   const API_URL = "https://fakestoreapi.com/products";

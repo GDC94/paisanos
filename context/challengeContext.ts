@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { Action } from "reducer/challengeReducer";
+import { Action } from "reducers/challengeReducer";
 import { ChallengeState } from "typings/challengeState";
 
 export type Dispatch = (action: Action) => void;

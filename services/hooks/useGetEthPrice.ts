@@ -1,7 +1,7 @@
 import useSWRWrapper from "components/libs/swr/useSWRWrapper";
 import BASE_URL from "config/baseUrl";
 import { useChallengeState } from "context/challengeContext";
-import { fetcherGet } from "fetchers/fetcherGet";
+import { fetcherGet } from "fetchers";
 import { getUrlEthPrice } from "services/urls";
 import { EthPriceInfoResponse } from "typings/responses";
 
@@ -11,7 +11,7 @@ import { EthPriceInfoResponse } from "typings/responses";
  * @returns a eth price and eth price in usd
  */
 
-export const useGetEthPrice = () => {
+const useGetEthPrice = () => {
   const { challengeState } = useChallengeState();
   const { userKey } = challengeState;
   const API_URL = getUrlEthPrice(BASE_URL);

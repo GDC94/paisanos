@@ -7,7 +7,7 @@ export type Action =
   | { type: "filter by range" }
   | { type: "filter by category" };
 
-const challengeReducer = (
+const ChallengeReducer = (
   stateChallenge: ChallengeState,
   action: Action,
 ): ChallengeState => {
@@ -20,4 +20,4 @@ const challengeReducer = (
   }
 };
 
-export default challengeReducer;
+export default ChallengeReducer;

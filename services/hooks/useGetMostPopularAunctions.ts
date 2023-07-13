@@ -1,7 +1,7 @@
 import useSWRWrapper from "components/libs/swr/useSWRWrapper";
 import BASE_URL from "config/baseUrl";
 import { useChallengeState } from "context/challengeContext";
-import { fetcherGet } from "fetchers/fetcherGet";
+import { fetcherGet } from "fetchers";
 import { getUrlMostPopularAunctions } from "services/urls";
 import { NFPAISANO } from "typings/responses";
 
@@ -11,7 +11,7 @@ import { NFPAISANO } from "typings/responses";
  * @returns a list with a most popular aunctions
  */
 
-export const useGetMostPopularAunctions = () => {
+const useGetMostPopularAunctions = () => {
   const { challengeState } = useChallengeState();
   const { userKey } = challengeState;
   const API_URL = getUrlMostPopularAunctions(BASE_URL);
