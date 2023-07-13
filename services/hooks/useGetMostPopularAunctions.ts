@@ -7,7 +7,6 @@ import { NFPAISANO } from "typings/responses";
 
 /**
  * @method  useGetMostPopularAunctions custom hook with swr
- *
  * @returns a list with a most popular aunctions
  */
 

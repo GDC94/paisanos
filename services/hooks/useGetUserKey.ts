@@ -7,7 +7,6 @@ import { PostApiKeyResponse } from "typings/responses";
 
 /**
  * @method  useGetUserKey custom hook with swr
- *
  * @returns a user key
  */
 

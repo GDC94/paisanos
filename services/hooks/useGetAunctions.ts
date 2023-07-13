@@ -7,7 +7,6 @@ import { NFPAISANO } from "typings/responses";
 
 /**
  * @method  useGetAunctions custom hook with swr
- *
  * @returns a list with all aunctions
  */
 

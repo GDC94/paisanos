@@ -1,8 +1,7 @@
-import { PATHS } from "config";
+import { PATHS } from "config/paths";
 import Head from "next/head";
 import { MainLayout } from "layouts/mainLayout";
 import { Button } from "components/commons/button";
-
 import {
   ErrorContainer,
   ErrorNumberAndMessage,

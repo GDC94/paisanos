@@ -7,7 +7,6 @@ import { EthPriceInfoResponse } from "typings/responses";
 
 /**
  * @method  useGetEthPrice custom hook with swr
- *
  * @returns a eth price and eth price in usd
  */
 
