@@ -9,15 +9,9 @@ import {
   LogoContainer,
   NavItemsContainer,
 } from "./header.styles";
-import { useGetUserKey } from "services/hooks";
+
 
 const Header = () => {
-
-  const {userKey} = useGetUserKey();
-
-  
-
-  if(!userKey) return <h2>No hay header</h2>;
   return (
     <HeaderContainer>
       <HeaderContentLeft>
