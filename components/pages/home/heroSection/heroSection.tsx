@@ -1,10 +1,12 @@
-import Image from "next/image";
 import { Container } from "layouts/mainLayout";
 import { BidSummaryCard } from "components/bidSummaryCard";
 import { AssetDetails } from "components/assetDetails";
 import { ButtonsAuction } from "components/buttonsAuction";
 import AunctionTimeInfo from "components/aunctionTimeInfo/aunctionTimeInfo";
 import { ButtonsGaleryControls } from "components/buttonsGaleryControls";
+import { dataPopular, ethPriceData } from "data";
+import nfPaisanosDataAdapter from "adapters/nfPaisanosDataAdapter";
+import { Carrousel } from "components/carrousel/carrousel";
 import {
   ContainerImg,
   MainContent,
@@ -13,12 +15,12 @@ import {
   WrapperImage,
   SummaryContainer,
 } from "./heroSection.styles";
-import { ethPriceData } from "data";
+
 
 const HeroSection = () => {
 
 
-
+  const info = nfPaisanosDataAdapter(dataPopular);
   
   return (
     <HeroContainer>
@@ -26,13 +28,7 @@ const HeroSection = () => {
         <MainContent>
           <WrapperImage>
             <ContainerImg>
-              <Image
-                src='/images/jon-tyson-gnFiwlyBH-A-unsplash 1.png'
-                alt='Next.js Logo'
-                layout='responsive'
-                width={640}
-                height={800}
-              />
+            <Carrousel/>
             </ContainerImg>
           </WrapperImage>
           <WrapperAssetDetails>
@@ -46,6 +42,7 @@ const HeroSection = () => {
           </WrapperAssetDetails>
         </MainContent>
       </Container>
+    
     </HeroContainer>
   );
 };

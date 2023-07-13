@@ -6,13 +6,12 @@ import { FetcherProps } from "typings/requests";
  *
  * @param url
  * @param headers
- *
  * @return Promise
  */
 
-export const fetcher = async (
+export const fetcherGet = async (
   url: FetcherProps["url"],
-  config: FetcherProps["config"],
+  config?: FetcherProps["config"],
 ) => {
   return await axios.get(url, config).then((res) => res.data);
 };
