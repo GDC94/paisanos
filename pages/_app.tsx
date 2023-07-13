@@ -2,7 +2,7 @@ import type { AppProps } from "next/app";
 import { SWRConfig } from "swr";
 import { ThemeProvider } from "@emotion/react";
 import { theme } from "styles/theme";
-
+import ChallengeProvider from "context/challengeProvider";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -11,9 +11,11 @@ export default function App({ Component, pageProps }: AppProps) {
         revalidateIfStale: false,
       }}
     >
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <ChallengeProvider>
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </ChallengeProvider>
     </SWRConfig>
   );
 }

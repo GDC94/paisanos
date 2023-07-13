@@ -1,6 +1,6 @@
-/*
-import useSWR from "swr";
 
+import useSWR from "swr";
+/*
 const fetcher = async (url: string) => {
   const requestOptions = {
     method: "GET",
@@ -12,16 +12,23 @@ const fetcher = async (url: string) => {
   return fetch(url, requestOptions).then((res) => res.json());
 };
 
-export const useGetPriceEth = () => {
+*/
+
+
+export const useGetUserKey = () => {
+  let fetcher;
   const API_URL =
     "http://challenges.us-east-1.elasticbeanstalk.com/nfpaisanos/eth-price";
 
   const { data, error, ...rest } = useSWR(API_URL, fetcher);
 
-  return { price: data, error, ...rest };
+  return { userKey: data, error, ...rest };
+  
 };
 
-export default useGetPriceEth;
+export default useGetUserKey;
+
+/*
 
 import axios from "axios";
 

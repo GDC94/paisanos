@@ -1,7 +1,6 @@
 import axios from "axios";
 
 /**
- * Utility: Is an asynchronous function to make the calls with swr-
  *
  * @param url
  * @param body

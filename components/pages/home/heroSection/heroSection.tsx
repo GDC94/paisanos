@@ -11,8 +11,11 @@ import {
   WrapperAssetDetails,
   WrapperImage,
 } from "./heroSection.styles";
+import { dataPopular } from "data";
 
 const HeroSection = () => {
+  console.log(dataPopular);
+
   return (
     <HeroContainer>
       <Container>
