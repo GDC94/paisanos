@@ -6,7 +6,6 @@ import { FetcherProps } from "typings/requests";
  *
  * @param url
  * @param body
- *
  * @return Promise
  */
 

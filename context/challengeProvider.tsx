@@ -15,10 +15,12 @@ const ChallengeProvider = ({ children }: UserProviderProps) => {
   /* const { userKey } = useGetUserKey(); */
 
   const userKey = "aca va la user key";
+  const message = "Bienvenido";
   const challengeState = useMemo(() => {
     const userData = {
       challengeState: {
         ...stateChallenge,
+        message,
         userKey,
       },
       resetState: () => dispatchUser({ type: "reset challenge state" }),
