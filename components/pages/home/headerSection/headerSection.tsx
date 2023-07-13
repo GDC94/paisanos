@@ -1,8 +1,8 @@
 import { Container } from "layouts/mainLayout";
 import { Header } from "components/header";
-import { NavSectionContainer } from "./NavbarSection.styles";
+import { NavSectionContainer } from "./headerSection.styles";
 
-const NavSection = () => {
+const HeaderSection = () => {
   return (
     <NavSectionContainer>
       <Container>
@@ -12,4 +12,4 @@ const NavSection = () => {
   );
 };
 
-export default NavSection;
+export default HeaderSection;

@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { MainLayout } from "layouts/mainLayout";
 import { HeroSection } from "components/pages/home/heroSection";
-import { NavbarSection } from "components/pages/home/navSection";
+import { NavbarSection } from "components/pages/home/headerSection";
 import { CardsSection } from "components/pages/home/cardsSection";
 import { SearchSection } from "components/pages/home/searchSection";
 import { FilterCategorySection } from "components/pages/home/filterCategorySection";
