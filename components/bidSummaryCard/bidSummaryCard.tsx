@@ -1,7 +1,6 @@
+import { EthPriceInfoResponse } from "typings/responses";
 import { Text } from "components/commons/text";
 import { BidContent } from "./bidSummaryCard.styles";
-
-import { EthPriceInfoResponse } from "typings/responses";
 
 interface BidSummaryCardProps {
   ethInformation: EthPriceInfoResponse;
