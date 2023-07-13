@@ -1,15 +1,28 @@
 import useSWRWrapper from "components/libs/swr/useSWRWrapper";
-import { fetcherGet } from "fetchers/fetcherGet";
+import BASE_URL from "config/baseUrl";
+import { fetcherPost } from "fetchers/fetcherPost";
+import { getUrlLogin } from "services/urls";
+import { bodyRequestApiKey } from "typings/requests";
+import { PostApiKeyResponse } from "typings/responses";
+
+/**
+ * @method  useGetUserKey custom hook with swr
+ *
+ * @returns a user key
+ */
 
 export const useGetUserKey = () => {
-  const API_URL = "https://fakestoreapi.com/products";
-
-  const { data, error, ...rest } = useSWRWrapper({
+  const API_URL = getUrlLogin(BASE_URL);
+  const BODY: bodyRequestApiKey = {
+    nombre: "German",
+    email: "german@challengepaisanos.com",
+  };
+  const { data, error, ...rest } = useSWRWrapper<PostApiKeyResponse>({
     key: API_URL,
-    fetcher: async () => fetcherGet(API_URL),
+    fetcher: async () => fetcherPost(API_URL, BODY),
   });
 
-  return { userKey: data, error, ...rest };
+  return { userKey: data?.key, welcomeMessage: data?.message, error, ...rest };
 };
 
 export default useGetUserKey;

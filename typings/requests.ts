@@ -13,6 +13,6 @@ export interface bodyRequestApiKey {
 
 export interface headersChallenge extends Partial<AxiosRequestConfig> {
   headers: {
-    apiKey: string;
+    apiKey: string | undefined;
   };
 }

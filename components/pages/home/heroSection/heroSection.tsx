@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Container } from "layouts/mainLayout";
 import { BidSummaryCard } from "components/bidSummaryCard";
 import { AssetDetails } from "components/assetDetails";
@@ -14,7 +15,6 @@ import {
   WrapperImage,
   SummaryContainer,
 } from "./heroSection.styles";
-import Image from "next/image";
 
 const HeroSection = () => {
   return (

@@ -1,10 +1,10 @@
 import { Text } from "components/commons/text";
 import { BidContent } from "./bidSummaryCard.styles";
 
-import { EthPriceInfo } from "typings/responses";
+import { EthPriceInfoResponse } from "typings/responses";
 
 interface BidSummaryCardProps {
-  ethInformation: EthPriceInfo;
+  ethInformation: EthPriceInfoResponse;
 }
 
 const BidSummaryCard = ({ ethInformation }: BidSummaryCardProps) => {

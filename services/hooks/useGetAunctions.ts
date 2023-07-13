@@ -2,31 +2,31 @@ import useSWRWrapper from "components/libs/swr/useSWRWrapper";
 import BASE_URL from "config/baseUrl";
 import { useChallengeState } from "context/challengeContext";
 import { fetcherGet } from "fetchers/fetcherGet";
-import { getUrlEthPrice } from "services/urls";
-import { EthPriceInfoResponse } from "typings/responses";
+import { getUrlAllAunctions } from "services/urls";
+import { NFPAISANO } from "typings/responses";
 
 /**
- * @method  useGetEthPrice custom hook with swr
+ * @method  useGetAunctions custom hook with swr
  *
- * @returns a eth price and eth price in usd
+ * @returns a list with all aunctions
  */
 
-export const useGetEthPrice = () => {
+export const useGetAunctions = () => {
   const { challengeState } = useChallengeState();
   const { userKey } = challengeState;
-  const API_URL = getUrlEthPrice(BASE_URL);
+  const API_URL = getUrlAllAunctions(BASE_URL);
 
   const config = {
     headers: {
       apiKey: userKey,
     },
   };
-  const { data, error, ...rest } = useSWRWrapper<EthPriceInfoResponse>({
+  const { data, error, ...rest } = useSWRWrapper<NFPAISANO[]>({
     key: API_URL,
     fetcher: async () => fetcherGet(API_URL, config),
   });
 
-  return { ethPrice: data?.eth, priceInUsd: data?.usd, error, ...rest };
+  return { allAunctions: data, error, ...rest };
 };
 
-export default useGetEthPrice;
+export default useGetAunctions;

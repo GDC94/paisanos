@@ -11,7 +11,7 @@ import { FetcherProps } from "typings/requests";
 
 export const fetcherGet = async (
   url: FetcherProps["url"],
-  config?: FetcherProps["config"],
+  config: FetcherProps["config"],
 ) => {
   return await axios.get(url, config).then((res) => res.data);
 };

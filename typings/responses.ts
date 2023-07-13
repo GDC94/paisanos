@@ -1,9 +1,9 @@
-export interface EthPriceInfo {
+export interface EthPriceInfoResponse {
   eth: string;
   usd: string;
 }
 
-export interface PostApiKey {
+export interface PostApiKeyResponse {
   message: string;
   key: string;
 }
