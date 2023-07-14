@@ -1,9 +1,5 @@
 import { challengeInitialState } from "context/initialValue";
-import { ChallengeState } from "typings/challengeState";
-export interface PriceRange {
-  minPrice: number;
-  maxPrice: number;
-}
+import { ChallengeState, PriceRange } from "typings/challengeState";
 
 export type Action =
   | { type: "reset challenge state" }

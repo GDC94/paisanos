@@ -1,8 +1,9 @@
 import React, { useMemo, useReducer } from "react";
 import * as MockedResponses from "../data";
 import { challengeInitialState } from "./initialValue";
-import challengeReducer, { PriceRange } from "reducers/challengeReducer";
+import challengeReducer from "reducers/challengeReducer";
 import ChallengeContext from "./challengeContext";
+import { PriceRange } from "typings/challengeState";
 
 type UserProviderProps = {
   children: React.ReactNode;

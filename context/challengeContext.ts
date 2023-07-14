@@ -1,6 +1,6 @@
 import { createContext, useContext } from "react";
-import { Action, PriceRange } from "reducers/challengeReducer";
-import { ChallengeState } from "typings/challengeState";
+import { Action } from "reducers/challengeReducer";
+import { ChallengeState, PriceRange } from "typings/challengeState";
 
 export type Dispatch = (action: Action) => void;
 
