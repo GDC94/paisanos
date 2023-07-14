@@ -5,7 +5,7 @@ import {
   Slider,
 } from "./inputRange.styles";
 
-interface Props {
+interface InputRangeProps {
   value: string | number;
   handleChange: (minPrice: number, maxPrice: number) => void;
   min: number;
@@ -13,7 +13,7 @@ interface Props {
   step: string | number;
 }
 
-const InputRange = ({ value, handleChange, min, max, step }: Props) => {
+const InputRange = ({ value, handleChange, min, max, step }: InputRangeProps) => {
   const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = parseFloat(event.target.value);
     handleChange(newValue, max);
