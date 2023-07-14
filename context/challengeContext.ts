@@ -5,7 +5,11 @@ import { ChallengeState } from "typings/challengeState";
 export type Dispatch = (action: Action) => void;
 
 const ChallengeContext = createContext<
-  { challengeState: ChallengeState; resetState: () => void } | undefined
+  { challengeState: ChallengeState; 
+    resetState: () => void;
+    filterByCategory: (category: string) => void;
+  
+  } | undefined
 >(undefined);
 
 export default ChallengeContext;

@@ -106,4 +106,16 @@ export const ButtonContainer = styled.button`
       border-color: ${(props) => props.theme.colors.neutrals6};
     }
   }
+
+  &.reset {
+    background-color: transparent;
+    color: ${(props) => props.theme.colors.neutrals8};
+    font-size: ${(props) => props.theme.size["0.75rem"]};
+    font-family: ${(props) => props.theme.fonts.Poppins};
+    border: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+    gap: ${(props) => props.theme.size["0.5rem"]};
+  }
 `;

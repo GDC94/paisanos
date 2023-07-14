@@ -20,6 +20,8 @@ const HeroSection = () => {
   const [currentItemIndex, setCurrentItemIndex] = useState<number>(0);
   const { challengeState } = useChallengeState();
   const { mostPopularAunctions, ethPriceInfo } = challengeState;
+
+  
   const mostPopularAunctionsAdapted =
     nfPaisanosDataAdapter(mostPopularAunctions);
 

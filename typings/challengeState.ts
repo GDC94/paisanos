@@ -9,4 +9,5 @@ export interface ChallengeState {
   };
   allAunctions: NFPAISANO[];
   mostPopularAunctions: NFPAISANO[];
+  filteredAunctions: NFPAISANO[];
 }

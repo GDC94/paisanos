@@ -9,7 +9,7 @@ type UserProviderProps = {
 };
 
 const ChallengeProvider = ({ children }: UserProviderProps) => {
-  const [stateChallenge, dispatchUser] = useReducer(
+  const [stateChallenge, dispatch] = useReducer(
     challengeReducer,
     challengeInitialState,
   );
@@ -21,7 +21,10 @@ const ChallengeProvider = ({ children }: UserProviderProps) => {
         ...stateChallenge,
         userKey: MockedResponses?.apiKey?.key,
       },
-      resetState: () => dispatchUser({ type: "reset challenge state" }),
+      resetState: () => dispatch({ type: "reset challenge state" }),
+      filterByCategory: (category: string) => {
+        dispatch({ type: "filter by category", payload: category });
+      },
     };
     return userData;
   }, [stateChallenge]);

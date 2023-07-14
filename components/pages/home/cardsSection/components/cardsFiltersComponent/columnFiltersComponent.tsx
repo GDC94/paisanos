@@ -15,9 +15,10 @@ import {
   RangeFilterContent,
   ResetFiltersContent,
 } from "./columnFiltersComponent.styles";
+import { ButtonPaisa } from "components/commons/buttonPaisa";
 
 const ColumnFiltersComponent = () => {
-  const { challengeState } = useChallengeState();
+  const { challengeState, resetState } = useChallengeState();
   const { allAunctions } = challengeState;
 
   const colors = adapterColorsToFilter(allAunctions);
@@ -86,13 +87,11 @@ const ColumnFiltersComponent = () => {
 
       <Divider />
       <ResetFiltersContent>
-        <ResetIcon />
-        <Text
-          text={"Reset filter"}
-          color={"neutrals7"}
-          size='0.75rem'
-          lineHeight='1rem'
-          isPoppins
+        <ButtonPaisa
+          text='Reset filters'
+          buttonType='reset'
+          icon={<ResetIcon />}
+          onClick={() => resetState()}
         />
       </ResetFiltersContent>
     </CardsFiltersContainer>

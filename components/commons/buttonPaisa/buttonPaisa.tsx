@@ -7,7 +7,8 @@ export interface ButtonPaisaProps {
     | "large-solid"
     | "large-outline"
     | "galery-controls"
-    | "search-button";
+    | "search-button"
+    | "reset";
   text?: string;
   icon?: JSX.Element;
   onClick?: () => void;

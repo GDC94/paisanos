@@ -1,3 +1,4 @@
+import { useChallengeState } from "context/challengeContext";
 import { Container } from "layouts/mainLayout";
 import { FilterTag } from "./components/filterTag";
 import { DropDownComponent } from "components/commons/dropDown";
@@ -8,6 +9,8 @@ import {
 } from "./filterCategorySection.styles";
 
 const FilterCategorySection = () => {
+  const { filterByCategory } = useChallengeState();
+
   return (
     <CategorySectionContainer>
       <Container>
@@ -17,9 +20,15 @@ const FilterCategorySection = () => {
             defaultOptionValue='Newest'
           />
           <FiltersCategorySectionContent>
-            <FilterTag text={"All items"} isActive />
-            <FilterTag text={"Art"} />
-            <FilterTag text={"Photography"} />
+            <FilterTag
+              text={"All items"}
+              onClick={() => filterByCategory("All items")}
+            />
+            <FilterTag text={"Art"} onClick={() => filterByCategory("Art")} />
+            <FilterTag
+              text={"Photography"}
+              onClick={() => filterByCategory("Photography")}
+            />
           </FiltersCategorySectionContent>
         </FiltersContent>
       </Container>
