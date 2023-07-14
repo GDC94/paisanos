@@ -1,5 +1,6 @@
 import { Text } from "components/commons/text";
 import { OrderIcon } from "components/commons/icons/icons";
+import { AdaptedNFPaisanosData } from "typings/adaptersTypings";
 import {
   CardNftContainer,
   CoverImage,
@@ -17,57 +18,61 @@ import {
   LeftContent,
 } from "./cardNft.styles";
 
-/*
 interface cardNftProps {
-  nftName?: string;
+  adaptedNFPaisanosData: AdaptedNFPaisanosData;
 }
-*/
-const CardNft = () => (
-  <CardNftContainer>
-    <ImageContainer>
-      <ImgWrapper>
-        <CoverImage
-          src={"/images/jon-tyson-gnFiwlyBH-A-unsplash 1.png"}
-          loading='lazy'
-        />
-      </ImgWrapper>
-    </ImageContainer>
 
-    <ColumnContent>
-      <NameNft>Amazing digital art</NameNft>
-      <PriceNft>2.45 ETH</PriceNft>
-    </ColumnContent>
+const CardNft = (adaptedNFPaisanosData: cardNftProps) => {
+  const { adaptedNFPaisanosData: singleAunction } = adaptedNFPaisanosData;
+  return (
+    <CardNftContainer>
+      <ImageContainer>
+        <ImgWrapper>
+          <CoverImage src={singleAunction?.media?.image} loading='lazy' />
+        </ImgWrapper>
+      </ImageContainer>
 
-    <OwnersContent>
-      <AvatarOwners>
-        <OwnerImage src={"/images/user.png"} loading='lazy' />
-        <OwnerImage src={"/images/user.png"} loading='lazy' />
-        <OwnerImage src={"/images/user.png"} loading='lazy' />
-      </AvatarOwners>
-      <Stock>3 in stock</Stock>
-    </OwnersContent>
-    <CardDivider />
-    <FooterCard>
-      <LeftContent>
-        <OrderIcon />
+      <ColumnContent>
+        <NameNft>Amazing digital art</NameNft>
+        <PriceNft>{singleAunction?.instantPrice}</PriceNft>
+      </ColumnContent>
+
+      <OwnersContent>
+        <AvatarOwners>
+          {singleAunction?.bidUsers &&
+            singleAunction?.bidUsers?.map((bidUser) => (
+              <OwnerImage
+                key={bidUser?.id}
+                src={bidUser?.avatar}
+                loading='lazy'
+              />
+            ))}
+        </AvatarOwners>
+        <Stock>{singleAunction?.stock} in stock</Stock>
+      </OwnersContent>
+      <CardDivider />
+      <FooterCard>
+        <LeftContent>
+          <OrderIcon />
+          <Text
+            marginLeft='5px'
+            text={`Highest bid ${singleAunction?.highestBid}`}
+            color={"neutrals4"}
+            fontWeight={400}
+            size='0.75rem'
+            isPoppins
+          />
+        </LeftContent>
         <Text
-          marginLeft='5px'
-          text={"Highest bid"}
+          text={"New bid 🔥"}
           color={"neutrals4"}
           fontWeight={400}
           size='0.75rem'
           isPoppins
         />
-      </LeftContent>
-      <Text
-        text={"New bid 🔥"}
-        color={"neutrals4"}
-        fontWeight={400}
-        size='0.75rem'
-        isPoppins
-      />
-    </FooterCard>
-  </CardNftContainer>
-);
+      </FooterCard>
+    </CardNftContainer>
+  );
+};
 
 export default CardNft;

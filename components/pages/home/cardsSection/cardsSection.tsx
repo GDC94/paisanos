@@ -5,14 +5,20 @@ import {
   CardSectionContent,
   CardsSectionContainer,
 } from "./cardsSection.styles";
+import { useChallengeState } from "context/challengeContext";
+import nfPaisanosDataAdapter from "adapters/nfPaisanosDataAdapter";
 
 const CardsSection = () => {
+  const { challengeState } = useChallengeState();
+  const { allAunctions } = challengeState;
+  const allAunctionsAdapted = nfPaisanosDataAdapter(allAunctions);
+
   return (
     <CardsSectionContainer>
       <Container>
         <CardSectionContent>
           <ColumnFiltersComponent />
-          <CardsGridComponent />
+          <CardsGridComponent arrOfAllAunctionsAdapted={allAunctionsAdapted} />
         </CardSectionContent>
       </Container>
     </CardsSectionContainer>
