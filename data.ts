@@ -1,6 +1,6 @@
 import { EthPriceInfoResponse, NFPAISANO } from "typings/responses";
 
-export const dataPopular: NFPAISANO[] = [
+export const aunctionsResponse: NFPAISANO[] = [
   {
     id: 10,
     instantPrice: "4.45 ETH",

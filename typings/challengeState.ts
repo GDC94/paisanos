@@ -1,5 +1,11 @@
-// USER STATE
+
+// CHALLENGE STATE
 export interface ChallengeState {
-  message: string;
-  userKey?: string;
+  userKey: string;
+  ethPriceInfo: {
+    eth: string,
+    usd: string,
+  };
+  allAunctions: object;
+  mostPopularAunctions: object;
 }

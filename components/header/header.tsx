@@ -10,7 +10,6 @@ import {
   NavItemsContainer,
 } from "./header.styles";
 
-
 const Header = () => {
   return (
     <HeaderContainer>

@@ -5,7 +5,6 @@ import { AssetDetails } from "components/assetDetails";
 import { ButtonsAuction } from "components/buttonsAuction";
 import AunctionTimeInfo from "components/aunctionTimeInfo/aunctionTimeInfo";
 import { ButtonsGaleryControls } from "components/buttonsGaleryControls";
-import { ethPriceData } from "data";
 
 import {
   ContainerImg,
@@ -15,8 +14,12 @@ import {
   WrapperImage,
   SummaryContainer,
 } from "./heroSection.styles";
+import { useChallengeState } from "context/challengeContext";
 
 const HeroSection = () => {
+  const { challengeState } = useChallengeState();
+  const { ethPriceInfo } = challengeState;
+
   return (
     <HeroContainer>
       <Container>
@@ -35,7 +38,7 @@ const HeroSection = () => {
           <WrapperAssetDetails>
             <AssetDetails />
             <SummaryContainer>
-              <BidSummaryCard ethInformation={ethPriceData} />
+              <BidSummaryCard ethInformation={ethPriceInfo} />
               <AunctionTimeInfo />
             </SummaryContainer>
             <ButtonsAuction />

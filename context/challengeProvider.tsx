@@ -1,4 +1,5 @@
 import React, { useMemo, useReducer } from "react";
+import * as MockedResponses from "../data";
 import { challengeInitialState } from "./initialValue";
 import challengeReducer from "reducers/challengeReducer";
 import ChallengeContext from "./challengeContext";
@@ -14,19 +15,16 @@ const ChallengeProvider = ({ children }: UserProviderProps) => {
   );
   /* const { userKey } = useGetUserKey(); */
 
-  const userKey = "aca va la user key";
-  const message = "Bienvenido";
   const challengeState = useMemo(() => {
     const userData = {
       challengeState: {
         ...stateChallenge,
-        message,
-        userKey,
+        userKey: MockedResponses?.apiKey?.key,
       },
       resetState: () => dispatchUser({ type: "reset challenge state" }),
     };
     return userData;
-  }, [stateChallenge, userKey]);
+  }, [stateChallenge]);
 
   return (
     <ChallengeContext.Provider value={challengeState}>

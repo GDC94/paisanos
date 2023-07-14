@@ -31,5 +31,6 @@ export const FiltersContent = styled.div`
   align-items: center;
   @media ${DEVICES.tablet} {
     flex-direction: column;
+    border: none;
   }
 `;
