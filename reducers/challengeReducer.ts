@@ -3,7 +3,7 @@ import { ChallengeState } from "typings/challengeState";
 
 export type Action =
   | { type: "reset challenge state" }
-  | { type: "filter by colors", payload: string }
+  | { type: "filter by colors"; payload: string }
   | { type: "filter by range" }
   | { type: "filter by category"; payload: string };
 
@@ -23,7 +23,7 @@ const ChallengeReducer = (
         };
       } else {
         const filteredAunctions = challengeInitialState?.allAunctions?.filter(
-          (aunction) => aunction.type === action.payload
+          (aunction) => aunction.type === action.payload,
         );
         return {
           ...stateChallenge,
@@ -38,16 +38,17 @@ const ChallengeReducer = (
           allAunctions: challengeInitialState.allAunctions,
         };
       } else {
-        const filteredAunctionsByColor = challengeInitialState?.allAunctions?.filter(
-          (aunction) => aunction.attributes.color === action.payload
-        );
+        const filteredAunctionsByColor =
+          challengeInitialState?.allAunctions?.filter(
+            (aunction) => aunction.attributes.color === action.payload,
+          );
         return {
           ...stateChallenge,
           allAunctions: filteredAunctionsByColor,
         };
       }
     }
-    
+
     default:
       return challengeInitialState;
   }

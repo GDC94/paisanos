@@ -16,7 +16,6 @@ import {
   ResetFiltersContent,
 } from "./columnFiltersComponent.styles";
 
-
 const ColumnFiltersComponent = () => {
   const { challengeState, resetState, filterByColor } = useChallengeState();
   const { allAunctions } = challengeState;

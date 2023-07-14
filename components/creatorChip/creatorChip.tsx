@@ -1,19 +1,22 @@
-
 import { Text } from "../commons/text";
 import {
   AvatarWrapper,
   ChipContainer,
   InfoWrapper,
-  ImageChip
+  ImageChip,
 } from "./creatorChip.styles";
 
 interface CreatorChipProps {
   author?: string;
   instantPrice?: string;
-  authorAvatar?: string
+  authorAvatar?: string;
 }
 
-const CreatorChip = ({ author, instantPrice, authorAvatar }: CreatorChipProps) => (
+const CreatorChip = ({
+  author,
+  instantPrice,
+  authorAvatar,
+}: CreatorChipProps) => (
   <ChipContainer>
     {instantPrice && (
       <>

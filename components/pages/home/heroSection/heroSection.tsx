@@ -21,13 +21,13 @@ const HeroSection = () => {
   const { challengeState } = useChallengeState();
   const { mostPopularAunctions, ethPriceInfo } = challengeState;
 
-  
   const mostPopularAunctionsAdapted =
     nfPaisanosDataAdapter(mostPopularAunctions);
 
   const goToNextItem = () => {
     setCurrentItemIndex(
-      (prevIndex:number) => (prevIndex + 1) % mostPopularAunctionsAdapted?.length,
+      (prevIndex: number) =>
+        (prevIndex + 1) % mostPopularAunctionsAdapted?.length,
     );
   };
 
