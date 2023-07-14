@@ -20,11 +20,13 @@ type ItemProps = {
 interface DropDownComponentProps {
   items: ItemProps[];
   defaultOptionValue?: string;
+  filterByColor?: (color: string) => void;
 }
 
 export const DropDownComponent = ({
   items,
   defaultOptionValue = "",
+  filterByColor,
 }: DropDownComponentProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [value, setValue] = useState<string>(defaultOptionValue);
@@ -43,6 +45,9 @@ export const DropDownComponent = ({
               onClick={() => {
                 setIsVisible(false);
                 setValue(item?.text);
+                if (filterByColor) {
+                  filterByColor(item.text);
+                }
               }}
             >
               <DropItem>

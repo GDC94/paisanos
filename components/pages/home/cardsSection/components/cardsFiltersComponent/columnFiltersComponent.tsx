@@ -7,7 +7,7 @@ import adapterColorsToFilter from "adapters/adapterColorsToFilter";
 import { DropDownComponent } from "components/commons/dropDown";
 import { ResetIcon } from "components/commons/icons/icons";
 import { DynamicColorIcon } from "components/dynamicColorIcon";
-
+import { ButtonPaisa } from "components/commons/buttonPaisa";
 import {
   CardsFiltersContainer,
   DropContentColors,
@@ -15,10 +15,10 @@ import {
   RangeFilterContent,
   ResetFiltersContent,
 } from "./columnFiltersComponent.styles";
-import { ButtonPaisa } from "components/commons/buttonPaisa";
+
 
 const ColumnFiltersComponent = () => {
-  const { challengeState, resetState } = useChallengeState();
+  const { challengeState, resetState, filterByColor } = useChallengeState();
   const { allAunctions } = challengeState;
 
   const colors = adapterColorsToFilter(allAunctions);
@@ -65,7 +65,7 @@ const ColumnFiltersComponent = () => {
         />
         <DropDownComponent
           defaultOptionValue='Most Liked'
-          items={[{ text: "kemdkmed" }]}
+          items={[{ text: "Coming soon..." }]}
         />
       </DropContentMostLiked>
 
@@ -82,6 +82,7 @@ const ColumnFiltersComponent = () => {
         <DropDownComponent
           defaultOptionValue='colors'
           items={arrColorsAndIconsToFilter}
+          filterByColor={filterByColor}
         />
       </DropContentColors>
 

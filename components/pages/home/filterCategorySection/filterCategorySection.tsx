@@ -16,7 +16,7 @@ const FilterCategorySection = () => {
       <Container>
         <FiltersContent>
           <DropDownComponent
-            items={[{ text: "texto" }]}
+            items={[{ text: "Coming soon..." }]}
             defaultOptionValue='Newest'
           />
           <FiltersCategorySectionContent>

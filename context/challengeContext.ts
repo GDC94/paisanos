@@ -8,6 +8,7 @@ const ChallengeContext = createContext<
   { challengeState: ChallengeState; 
     resetState: () => void;
     filterByCategory: (category: string) => void;
+    filterByColor: (color: string) => void;
   
   } | undefined
 >(undefined);

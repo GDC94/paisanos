@@ -25,6 +25,9 @@ const ChallengeProvider = ({ children }: UserProviderProps) => {
       filterByCategory: (category: string) => {
         dispatch({ type: "filter by category", payload: category });
       },
+      filterByColor: (color: string) => {
+        dispatch({ type: "filter by colors", payload: color });
+      },
     };
     return userData;
   }, [stateChallenge]);
