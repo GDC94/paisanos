@@ -53,17 +53,7 @@ export const ColumnContent = styled.div`
   margin-bottom: ${(props) => props.theme.size["0.75rem"]};
 `;
 
-export const NameNft = styled.p`
-  font-size: ${(props) => props.theme.size["1rem"]};
-  line-height: ${(props) => props.theme.size["1.5rem"]};
-  color: ${(props) => props.theme.colors.neutrals8};
-  font-weight: 500;
-  font-family: ${(props) => props.theme.fonts.Poppins};
-  text-transform: none;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-`;
+
 
 export const PriceNft = styled.div`
   border: 2px solid ${(props) => props.theme.colors.primary4};

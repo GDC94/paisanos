@@ -1,12 +1,13 @@
 import { Container } from "layouts/mainLayout";
 import { CardsGridComponent } from "./components/cardsGridComponent";
 import { ColumnFiltersComponent } from "./components/cardsFiltersComponent";
+import { useChallengeState } from "context/challengeContext";
+import nfPaisanosDataAdapter from "adapters/nfPaisanosDataAdapter";
 import {
   CardSectionContent,
   CardsSectionContainer,
 } from "./cardsSection.styles";
-import { useChallengeState } from "context/challengeContext";
-import nfPaisanosDataAdapter from "adapters/nfPaisanosDataAdapter";
+
 
 const CardsSection = () => {
   const { challengeState } = useChallengeState();

@@ -13,7 +13,11 @@ export interface AdaptedNFPaisanosData {
   };
   auctionEndsAt: {
     day: string;
-    time: string;
+    time: {
+        hours: string;
+        mins: string;
+        secs: string;
+      };
   };
   media: {
     id: number;

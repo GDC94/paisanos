@@ -3,7 +3,7 @@ import { InputRange } from "components/commons/inputRange";
 import { Text } from "components/commons/text";
 import { Divider } from "components/commons/divider";
 import { useChallengeState } from "context/challengeContext";
-import adapterColorsToFilter from "adapters/filterColorsAdapter";
+import adapterColorsToFilter from "adapters/adapterColorsToFilter";
 import { DropDownComponent } from "components/commons/dropDown";
 import { ResetIcon } from "components/commons/icons/icons";
 import { DynamicColorIcon } from "components/dynamicColorIcon";

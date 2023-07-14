@@ -5,7 +5,17 @@ import {
   AuctionTimeContainer,
 } from "./aunctionTimeInfo.styles";
 
-const AunctionTimeInfo = () => {
+interface AunctionTimeInfoProps {
+  auctionEnds: {
+    time: {
+      hours: string;
+      mins: string;
+      secs: string;
+    };
+  };
+}
+
+const AunctionTimeInfo = ({ auctionEnds }: AunctionTimeInfoProps) => {
   return (
     <AuctionContent>
       <Text
@@ -18,7 +28,12 @@ const AunctionTimeInfo = () => {
       />
       <AuctionTimeContainer>
         <AuctionItem>
-          <Text color='neutrals8' text={"19"} size='2rem' lineHeight='2.5rem' />
+          <Text
+            color='neutrals8'
+            text={auctionEnds?.time?.hours}
+            size='2rem'
+            lineHeight='2.5rem'
+          />
           <Text
             color='neutrals4'
             text={"Hrs"}
@@ -29,7 +44,12 @@ const AunctionTimeInfo = () => {
           />
         </AuctionItem>
         <AuctionItem>
-          <Text color='neutrals8' text={"24"} size='2rem' lineHeight='2.5rem' />
+          <Text
+            color='neutrals8'
+            text={auctionEnds?.time?.mins}
+            size='2rem'
+            lineHeight='2.5rem'
+          />
           <Text
             color='neutrals4'
             text={"mins"}
@@ -40,7 +60,12 @@ const AunctionTimeInfo = () => {
           />
         </AuctionItem>
         <AuctionItem>
-          <Text color='neutrals8' text={"19"} size='2rem' lineHeight='2.5rem' />
+          <Text
+            color='neutrals8'
+            text={auctionEnds?.time?.secs}
+            size='2rem'
+            lineHeight='2.5rem'
+          />
           <Text
             color='neutrals4'
             text={"secs"}

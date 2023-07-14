@@ -21,32 +21,11 @@ export const MainContent = styled.div`
 `;
 
 export const WrapperImage = styled.div`
-  width: 60%;
-
-  @media ${DEVICES.tablet} {
-    width: 100%;
-    max-width: 100%;
-  }
-`;
-
-export const ContainerImg = styled.div`
   width: 100%;
-  min-width: 640px;
+  max-width: 640px; /* Establecer el ancho máximo deseado para desktop */
   height: auto;
-  min-height: 800px;
-
-  @media ${DEVICES.mobileL} {
-    min-width: 400px;
-  }
-  @media ${DEVICES.mobileL} {
-    min-width: 400px;
-    min-height: 300px;
-  }
-  @media ${DEVICES.mobileM} {
-    min-width: 300px;
-    min-height: 300px;
-  }
 `;
+
 
 export const ImageWrapper = styled.div`
   position: absolute;
@@ -54,6 +33,11 @@ export const ImageWrapper = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
+
+  @media ${DEVICES.tablet} {
+    width: 100%;
+    max-width: 100%;
+  }
 `;
 
 export const WrapperAssetDetails = styled.div`
@@ -72,4 +56,10 @@ export const SummaryContainer = styled.div`
   padding: ${(props) => props.theme.size["2.5rem"]};
   margin-top: ${(props) => props.theme.size["2.5rem"]};
   margin-bottom: ${(props) => props.theme.size["2.5rem"]};
+`;
+
+export const Image = styled.img`
+   width: 100%;
+  height: auto;
+  border-radius:${(props) => props.theme.size["0.5rem"]}  ;
 `;

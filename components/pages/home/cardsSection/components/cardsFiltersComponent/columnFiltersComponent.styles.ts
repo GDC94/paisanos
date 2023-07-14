@@ -16,7 +16,7 @@ export const DropContentMostLiked = styled.div`
 `;
 export const DropContentColors = styled.div`
   width: 256px;
-  margin-bottom: 13rem;
+  margin-bottom: 3rem;
 `;
 
 export const FilterContainer = styled.div`

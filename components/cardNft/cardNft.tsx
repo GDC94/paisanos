@@ -7,7 +7,6 @@ import {
   ImageContainer,
   ImgWrapper,
   ColumnContent,
-  NameNft,
   PriceNft,
   Stock,
   AvatarOwners,

@@ -1,21 +1,27 @@
 import { Text } from "components/commons/text";
 import { AssetDetailsContainer, CreatorInfo } from "./assetDetails.styles";
 import { CreatorChip } from "components/creatorChip";
+import { AdaptedNFPaisanosData } from "typings/adaptersTypings";
 
-const AssetDetails = () => {
+interface AssetDetailsProps {
+  currentPopularAunctionAdapted: AdaptedNFPaisanosData;
+}
+
+const AssetDetails = ({ currentPopularAunctionAdapted }: AssetDetailsProps) => {
   return (
     <AssetDetailsContainer>
       <Text
         color='neutrals8'
-        text={"the creator network®"}
+        text={currentPopularAunctionAdapted?.author}
         size='4rem'
         lineHeight='4rem'
         textType='title'
       />
       <CreatorInfo>
-        {[...Array(2)]?.map((_, key: number) => {
-          return <CreatorChip key={key} />;
-        })}
+        <CreatorChip author={currentPopularAunctionAdapted?.author} />
+        <CreatorChip
+          instantPrice={currentPopularAunctionAdapted?.instantPrice}
+        />
       </CreatorInfo>
     </AssetDetailsContainer>
   );

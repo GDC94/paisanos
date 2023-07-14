@@ -1,9 +1,9 @@
 import { AdaptedNFPaisanosData } from "typings/adaptersTypings";
 import { NFPAISANO } from "typings/responses";
 import getDateFormatted from "utils/getDateFormatted";
+import parseTimeString from "utils/parseTimeString";
 
 /**
- * userTokensAdapter
  *
  * @method nfPaisanosDataAdapter
  * @param
@@ -30,7 +30,7 @@ const nfPaisanosDataAdapter = (
       },
       auctionEndsAt: {
         day: getDateFormatted(auctionItem?.endsAt).day,
-        time: getDateFormatted(auctionItem?.endsAt).time,
+        time: parseTimeString(getDateFormatted(auctionItem?.endsAt).time),
       },
       media: {
         id: auctionItem?.media?.id,
