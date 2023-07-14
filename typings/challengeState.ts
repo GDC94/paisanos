@@ -11,10 +11,8 @@ export interface ChallengeState {
   mostPopularAunctions: NFPAISANO[];
   filteredAunctions: NFPAISANO[];
   filteredAunctionsByColor: NFPAISANO[];
-  filteredAunctionsByRange:  NFPAISANO[];
-
+  filteredAunctionsByRange: NFPAISANO[];
 }
-
 
 export interface PriceRange {
   minPrice: number;

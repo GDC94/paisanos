@@ -13,7 +13,13 @@ interface InputRangeProps {
   step: string | number;
 }
 
-const InputRange = ({ value, handleChange, min, max, step }: InputRangeProps) => {
+const InputRange = ({
+  value,
+  handleChange,
+  min,
+  max,
+  step,
+}: InputRangeProps) => {
   const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = parseFloat(event.target.value);
     handleChange(newValue, max);

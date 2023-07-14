@@ -25,8 +25,6 @@ const ColumnFiltersComponent = () => {
 
   const [priceRange, setPriceRange] = useState({ minPrice: 0, maxPrice: 10 });
 
-
-
   const handleChangePriceRange = (minPrice: number, maxPrice: number) => {
     const newPriceRange = { minPrice, maxPrice };
     setPriceRange(newPriceRange);
