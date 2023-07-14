@@ -33,7 +33,14 @@ const CardNft = (adaptedNFPaisanosData: cardNftProps) => {
       </ImageContainer>
 
       <ColumnContent>
-        <NameNft>Amazing digital art</NameNft>
+        <Text
+          text={"Amazing digital art"}
+          color={"neutrals8"}
+          fontWeight={400}
+          size='1rem'
+          lineHeight='1.5rem'
+          isPoppins
+        />
         <PriceNft>{singleAunction?.instantPrice}</PriceNft>
       </ColumnContent>
 
