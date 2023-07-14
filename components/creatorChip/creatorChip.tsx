@@ -11,10 +11,7 @@ interface CreatorChipProps {
   instantPrice?: string;
 }
 
-const CreatorChip = ({
-  author,
-  instantPrice,
-}: CreatorChipProps) => (
+const CreatorChip = ({ author, instantPrice }: CreatorChipProps) => (
   <ChipContainer>
     {instantPrice && (
       <>
@@ -48,7 +45,7 @@ const CreatorChip = ({
     {author && (
       <>
         <AvatarWrapper>
-          <Image src={'/images/user.png'} alt='Logo' width={40} height={40} />
+          <Image src={"/images/user.png"} alt='Logo' width={40} height={40} />
         </AvatarWrapper>
         <InfoWrapper>
           <Text

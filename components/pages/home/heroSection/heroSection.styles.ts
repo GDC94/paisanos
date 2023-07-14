@@ -26,7 +26,6 @@ export const WrapperImage = styled.div`
   height: auto;
 `;
 
-
 export const ImageWrapper = styled.div`
   position: absolute;
   top: 0;
@@ -59,7 +58,7 @@ export const SummaryContainer = styled.div`
 `;
 
 export const Image = styled.img`
-   width: 100%;
+  width: 100%;
   height: auto;
-  border-radius:${(props) => props.theme.size["0.5rem"]}  ;
+  border-radius: ${(props) => props.theme.size["0.5rem"]};
 `;

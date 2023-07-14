@@ -11,8 +11,6 @@ const ButtonsGaleryControls = ({
   goToNextItem,
   goToPreviousItem,
 }: ButtonsGaleryControlsProps) => {
-
-  
   return (
     <ButtonsGaleryContent>
       <ButtonPaisa
@@ -21,7 +19,11 @@ const ButtonsGaleryControls = ({
         icon={<ArrowBackIcon />}
         onClick={goToPreviousItem}
       />
-      <ButtonPaisa buttonType={"galery-controls"} icon={<ArrowNextIcon />} onClick={goToNextItem} />
+      <ButtonPaisa
+        buttonType={"galery-controls"}
+        icon={<ArrowNextIcon />}
+        onClick={goToNextItem}
+      />
     </ButtonsGaleryContent>
   );
 };

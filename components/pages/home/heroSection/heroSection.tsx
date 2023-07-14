@@ -43,9 +43,7 @@ const HeroSection = () => {
         <MainContent>
           <WrapperImage>
             <Image
-              src={
-                currentPopularAunctionAdapted?.media?.image
-              }
+              src={currentPopularAunctionAdapted?.media?.image}
               alt='Next.js Logo'
               loading='lazy'
             />

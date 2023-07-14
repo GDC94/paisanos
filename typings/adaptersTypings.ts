@@ -14,10 +14,10 @@ export interface AdaptedNFPaisanosData {
   auctionEndsAt: {
     day: string;
     time: {
-        hours: string;
-        mins: string;
-        secs: string;
-      };
+      hours: string;
+      mins: string;
+      secs: string;
+    };
   };
   media: {
     id: number;

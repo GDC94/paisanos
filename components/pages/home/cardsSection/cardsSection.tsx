@@ -8,7 +8,6 @@ import {
   CardsSectionContainer,
 } from "./cardsSection.styles";
 
-
 const CardsSection = () => {
   const { challengeState } = useChallengeState();
   const { allAunctions } = challengeState;

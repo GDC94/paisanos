@@ -53,8 +53,6 @@ export const ColumnContent = styled.div`
   margin-bottom: ${(props) => props.theme.size["0.75rem"]};
 `;
 
-
-
 export const PriceNft = styled.div`
   border: 2px solid ${(props) => props.theme.colors.primary4};
   border-radius: 4px;
