@@ -3,7 +3,6 @@ import useSWR from "swr";
 import BASE_URL from "config/baseUrl";
 import { getUrlLogin } from "services/urls";
 import { FetcherProps, bodyRequestApiKey } from "typings/requests";
-import { PostApiKeyResponse } from "typings/responses";
 
 /**
  * @method  useGetUserKey custom hook with swr
