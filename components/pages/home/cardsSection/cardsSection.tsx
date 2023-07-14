@@ -8,12 +8,14 @@ import {
   CardsSectionContainer,
 } from "./cardsSection.styles";
 
+
 const CardsSection = () => {
   const { challengeState } = useChallengeState();
   const { allAunctions } = challengeState;
   const allAunctionsAdapted = nfPaisanosDataAdapter(allAunctions);
 
   return (
+
     <CardsSectionContainer>
       <Container>
         <CardSectionContent>
@@ -22,6 +24,7 @@ const CardsSection = () => {
         </CardSectionContent>
       </Container>
     </CardsSectionContainer>
+
   );
 };
 

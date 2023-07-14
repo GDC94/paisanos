@@ -7,6 +7,7 @@ import { ButtonsAuction } from "components/buttonsAuction";
 import AunctionTimeInfo from "components/aunctionTimeInfo/aunctionTimeInfo";
 import { ButtonsGaleryControls } from "components/buttonsGaleryControls";
 import nfPaisanosDataAdapter from "adapters/nfPaisanosDataAdapter";
+import { FramerSection } from "components/commons/framerSection";
 import {
   MainContent,
   HeroContainer,
@@ -40,35 +41,37 @@ const HeroSection = () => {
     mostPopularAunctionsAdapted[currentItemIndex];
 
   return (
-    <HeroContainer>
-      <Container>
-        <MainContent>
-          <WrapperImage>
-            <Image
-              src={currentPopularAunctionAdapted?.media?.image}
-              alt='Next.js Logo'
-              loading='lazy'
-            />
-          </WrapperImage>
-          <WrapperAssetDetails>
-            <AssetDetails
-              currentPopularAunctionAdapted={currentPopularAunctionAdapted}
-            />
-            <SummaryContainer>
-              <BidSummaryCard ethInformation={ethPriceInfo} />
-              <AunctionTimeInfo
-                auctionEnds={currentPopularAunctionAdapted?.auctionEndsAt}
+    <FramerSection delay={0} duration={"0.9"}>
+      <HeroContainer>
+        <Container>
+          <MainContent>
+            <WrapperImage>
+              <Image
+                src={currentPopularAunctionAdapted?.media?.image}
+                alt='Next.js Logo'
+                loading='lazy'
               />
-            </SummaryContainer>
-            <ButtonsAuction />
-            <ButtonsGaleryControls
-              goToNextItem={goToNextItem}
-              goToPreviousItem={goToPreviousItem}
-            />
-          </WrapperAssetDetails>
-        </MainContent>
-      </Container>
-    </HeroContainer>
+            </WrapperImage>
+            <WrapperAssetDetails>
+              <AssetDetails
+                currentPopularAunctionAdapted={currentPopularAunctionAdapted}
+              />
+              <SummaryContainer>
+                <BidSummaryCard ethInformation={ethPriceInfo} />
+                <AunctionTimeInfo
+                  auctionEnds={currentPopularAunctionAdapted?.auctionEndsAt}
+                />
+              </SummaryContainer>
+              <ButtonsAuction />
+              <ButtonsGaleryControls
+                goToNextItem={goToNextItem}
+                goToPreviousItem={goToPreviousItem}
+              />
+            </WrapperAssetDetails>
+          </MainContent>
+        </Container>
+      </HeroContainer>
+    </FramerSection>
   );
 };
 

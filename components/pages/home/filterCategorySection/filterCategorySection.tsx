@@ -10,7 +10,6 @@ import {
 
 const FilterCategorySection = () => {
   const { filterByCategory } = useChallengeState();
-
   return (
     <CategorySectionContainer>
       <Container>
