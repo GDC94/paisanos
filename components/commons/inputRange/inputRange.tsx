@@ -1,5 +1,4 @@
 import { Text } from "../text";
-
 import {
   ContainerInputRange,
   ContainerMinMaxValues,
@@ -8,20 +7,24 @@ import {
 
 interface Props {
   value: string | number;
-  handleChange: (_e: React.ChangeEvent<HTMLInputElement>) => void;
-  min: string;
-  max: string;
-  step: string;
+  handleChange: (minPrice: number, maxPrice: number) => void;
+  min: number;
+  max: number;
+  step: string | number;
 }
 
 const InputRange = ({ value, handleChange, min, max, step }: Props) => {
+  const handleSliderChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = parseFloat(event.target.value);
+    handleChange(newValue, max);
+  };
   return (
     <>
       <ContainerInputRange>
         <Slider
           type='range'
           defaultValue={value}
-          onChange={handleChange}
+          onChange={handleSliderChange}
           min={min}
           max={max}
           step={step}
@@ -29,7 +32,7 @@ const InputRange = ({ value, handleChange, min, max, step }: Props) => {
       </ContainerInputRange>
       <ContainerMinMaxValues>
         <Text
-          text={min}
+          text={min.toString()}
           color={"neutrals7"}
           size='0.875'
           lineHeight='1.5'
@@ -37,7 +40,7 @@ const InputRange = ({ value, handleChange, min, max, step }: Props) => {
           isPoppins
         />
         <Text
-          text={max}
+          text={max.toString()}
           color={"neutrals7"}
           size='0.875'
           lineHeight='1.5'

@@ -17,19 +17,22 @@ import {
 } from "./columnFiltersComponent.styles";
 
 const ColumnFiltersComponent = () => {
-  const { challengeState, resetState, filterByColor } = useChallengeState();
+  const { challengeState, resetState, filterByColor, filterByRange } =
+    useChallengeState();
   const { allAunctions } = challengeState;
-
   const colors = adapterColorsToFilter(allAunctions);
   const arrColorsAndIconsToFilter = DynamicColorIcon(colors);
-  const [value, setValue] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
+  const [priceRange, setPriceRange] = useState({ minPrice: 0, maxPrice: 10 });
+
+
+
+  const handleChangePriceRange = (minPrice: number, maxPrice: number) => {
+    const newPriceRange = { minPrice, maxPrice };
+    setPriceRange(newPriceRange);
+    filterByRange(newPriceRange);
   };
 
-  const min = value;
-  const max = "10";
   return (
     <CardsFiltersContainer>
       <RangeFilterContent>
@@ -44,11 +47,11 @@ const ColumnFiltersComponent = () => {
         />
 
         <InputRange
-          value={"fl,l,lf,"}
-          handleChange={handleChange}
-          min={min}
-          max={max}
-          step={"dddd"}
+          value={priceRange.minPrice}
+          handleChange={handleChangePriceRange}
+          min={0}
+          max={10}
+          step={0.1}
         />
       </RangeFilterContent>
       <Divider />

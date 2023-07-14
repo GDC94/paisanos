@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { Action } from "reducers/challengeReducer";
+import { Action, PriceRange } from "reducers/challengeReducer";
 import { ChallengeState } from "typings/challengeState";
 
 export type Dispatch = (action: Action) => void;
@@ -10,6 +10,7 @@ const ChallengeContext = createContext<
       resetState: () => void;
       filterByCategory: (category: string) => void;
       filterByColor: (color: string) => void;
+      filterByRange: ({ maxPrice, minPrice }: PriceRange) => void;
     }
   | undefined
 >(undefined);

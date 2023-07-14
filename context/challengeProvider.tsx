@@ -1,7 +1,7 @@
 import React, { useMemo, useReducer } from "react";
 import * as MockedResponses from "../data";
 import { challengeInitialState } from "./initialValue";
-import challengeReducer from "reducers/challengeReducer";
+import challengeReducer, { PriceRange } from "reducers/challengeReducer";
 import ChallengeContext from "./challengeContext";
 
 type UserProviderProps = {
@@ -27,6 +27,9 @@ const ChallengeProvider = ({ children }: UserProviderProps) => {
       },
       filterByColor: (color: string) => {
         dispatch({ type: "filter by colors", payload: color });
+      },
+      filterByRange: ({ maxPrice, minPrice }: PriceRange) => {
+        dispatch({ type: "filter by range", payload: { maxPrice, minPrice } });
       },
     };
     return userData;

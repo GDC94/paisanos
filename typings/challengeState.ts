@@ -11,4 +11,6 @@ export interface ChallengeState {
   mostPopularAunctions: NFPAISANO[];
   filteredAunctions: NFPAISANO[];
   filteredAunctionsByColor: NFPAISANO[];
+  filteredAunctionsByRange:  NFPAISANO[];
+
 }

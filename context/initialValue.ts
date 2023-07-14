@@ -11,4 +11,5 @@ export const challengeInitialState: ChallengeState = {
   mostPopularAunctions: MockedResponses.aunctionsResponse,
   filteredAunctions: [],
   filteredAunctionsByColor: [],
+  filteredAunctionsByRange: []
 };
