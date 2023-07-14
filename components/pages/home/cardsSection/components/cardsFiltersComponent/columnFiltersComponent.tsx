@@ -2,8 +2,12 @@ import { useState } from "react";
 import { InputRange } from "components/commons/inputRange";
 import { Text } from "components/commons/text";
 import { Divider } from "components/commons/divider";
+import { useChallengeState } from "context/challengeContext";
+import adapterColorsToFilter from "adapters/filterColorsAdapter";
 import { DropDownComponent } from "components/commons/dropDown";
 import { ResetIcon } from "components/commons/icons/icons";
+import { DynamicColorIcon } from "components/dynamicColorIcon";
+
 import {
   CardsFiltersContainer,
   DropContentColors,
@@ -13,7 +17,13 @@ import {
 } from "./columnFiltersComponent.styles";
 
 const ColumnFiltersComponent = () => {
+  const { challengeState } = useChallengeState();
+  const { allAunctions } = challengeState;
+
+  const colors = adapterColorsToFilter(allAunctions);
+  const arrColorsAndIconsToFilter = DynamicColorIcon(colors);
   const [value, setValue] = useState("");
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
@@ -70,71 +80,9 @@ const ColumnFiltersComponent = () => {
         />
         <DropDownComponent
           defaultOptionValue='colors'
-          items={[{ text: "kemdkmed" }]}
+          items={arrColorsAndIconsToFilter}
         />
       </DropContentColors>
-      {/*
-       <FilterContainer>
-      <ItemColorFilter>
-        <AllColorsIcon />
-        <Text
-          text={"All colors"}
-          color={"primary1"}
-          size='0.75rem'
-          lineHeight='1.5rem'
-          fontWeight={500}
-          isPoppins
-        />
-      </ItemColorFilter>
-
-      <ItemColorFilter>
-        <BlackIcon />
-        <Text
-          text={"Black"}
-          color={"neutrals8"}
-          size='0.75rem'
-          lineHeight='1.5rem'
-          fontWeight={500}
-          isPoppins
-        />
-      </ItemColorFilter>
-      <ItemColorFilter >
-        <GreenIcon />
-        <Text
-          text={"Green"}
-          color={"neutrals8"}
-          size='0.75rem'
-          lineHeight='1.5rem'
-          fontWeight={500}
-          isPoppins
-        />
-      </ItemColorFilter>
-
-      <ItemColorFilter>
-        <PinkIcon />
-        <Text
-          text={"Pink"}
-          color={"neutrals8"}
-          size='0.75rem'
-          lineHeight='1.5rem'
-          fontWeight={500}
-          isPoppins
-        />
-      </ItemColorFilter>
-
-      <ItemColorFilter>
-        <PurpleIcon />
-        <Text
-          text={"Purple"}
-          color={"neutrals8"}
-          size='0.75rem'
-          lineHeight='1.5rem'
-          fontWeight={500}
-          isPoppins
-        />
-      </ItemColorFilter>
-    </FilterContainer>
-   */}
 
       <Divider />
       <ResetFiltersContent>

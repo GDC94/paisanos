@@ -1,11 +1,12 @@
+import { NFPAISANO } from "./responses";
 
 // CHALLENGE STATE
 export interface ChallengeState {
   userKey: string;
   ethPriceInfo: {
-    eth: string,
-    usd: string,
+    eth: string;
+    usd: string;
   };
-  allAunctions: object;
-  mostPopularAunctions: object;
+  allAunctions: NFPAISANO[];
+  mostPopularAunctions: NFPAISANO[];
 }

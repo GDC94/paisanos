@@ -18,10 +18,7 @@ type ItemProps = {
 };
 
 interface DropDownComponentProps {
-  items: {
-    text: string;
-    icon?: JSX.Element;
-  }[];
+  items: ItemProps[];
   defaultOptionValue?: string;
 }
 

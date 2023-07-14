@@ -5,7 +5,6 @@ export const CardsFiltersContainer = styled.div`
   height: 600px;
   background-color: ${(props) => props.theme.colors.neutrals1};
   border-radius: ${(props) => props.theme.size["1.5rem"]};
-
   transition-duration: 0.4s;
 `;
 
@@ -17,7 +16,7 @@ export const DropContentMostLiked = styled.div`
 `;
 export const DropContentColors = styled.div`
   width: 256px;
-  margin-bottom: 20rem;
+  margin-bottom: 13rem;
 `;
 
 export const FilterContainer = styled.div`

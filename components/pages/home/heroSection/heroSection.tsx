@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useChallengeState } from "context/challengeContext";
 import { Container } from "layouts/mainLayout";
 import { BidSummaryCard } from "components/bidSummaryCard";
 import { AssetDetails } from "components/assetDetails";
@@ -14,12 +15,10 @@ import {
   WrapperImage,
   SummaryContainer,
 } from "./heroSection.styles";
-import { useChallengeState } from "context/challengeContext";
 
 const HeroSection = () => {
   const { challengeState } = useChallengeState();
   const { ethPriceInfo } = challengeState;
-
   return (
     <HeroContainer>
       <Container>

@@ -96,4 +96,5 @@ export const DropdownOptionsList = styled.div`
   background-color: ${(props) => props.theme.colors.neutrals2};
   border-radius: ${(props) => props.theme.size["0.75rem"]};
   padding: ${(props) => props.theme.size["0.5rem"]};
+  border: 2px solid ${(props) => props.theme.colors.neutrals3};
 `;
