@@ -22,3 +22,9 @@ export const InfoWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
 `;
+
+export const ImageChip = styled.img`
+  width: ${(props) => props.theme.size["2.5rem"]};
+  height: ${(props) => props.theme.size["2.5rem"]};
+  border-radius: 50%;
+`;

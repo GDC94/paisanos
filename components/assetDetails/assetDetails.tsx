@@ -18,7 +18,10 @@ const AssetDetails = ({ currentPopularAunctionAdapted }: AssetDetailsProps) => {
         textType='title'
       />
       <CreatorInfo>
-        <CreatorChip author={currentPopularAunctionAdapted?.author} />
+        <CreatorChip
+          author={currentPopularAunctionAdapted?.author}
+          authorAvatar={currentPopularAunctionAdapted?.authorAvatar}
+        />
         <CreatorChip
           instantPrice={currentPopularAunctionAdapted?.instantPrice}
         />

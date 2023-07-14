@@ -25,13 +25,13 @@ const HeroSection = () => {
 
   const goToNextItem = () => {
     setCurrentItemIndex(
-      (prevIndex) => (prevIndex + 1) % mostPopularAunctionsAdapted.length,
+      (prevIndex:number) => (prevIndex + 1) % mostPopularAunctionsAdapted?.length,
     );
   };
 
   const goToPreviousItem = () => {
-    setCurrentItemIndex((prevIndex) =>
-      prevIndex === 0 ? mostPopularAunctionsAdapted.length - 1 : prevIndex - 1,
+    setCurrentItemIndex((prevIndex: number) =>
+      prevIndex === 0 ? mostPopularAunctionsAdapted?.length - 1 : prevIndex - 1,
     );
   };
   const currentPopularAunctionAdapted =

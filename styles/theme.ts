@@ -52,6 +52,7 @@ export const theming = {
     "2rem": "2rem",
     "2.5rem": "2.5rem",
     "3rem": "3rem",
+    "3.75rem": "3.75rem",
     "4rem": "4rem",
   },
   fontWeight: {
