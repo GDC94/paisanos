@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { DEVICES } from "config";
 
 export const DropDownWrapper = styled.div`
   align-items: center;
@@ -9,6 +10,10 @@ export const DropDownWrapper = styled.div`
   text-transform: uppercase;
   white-space: nowrap;
   position: relative;
+
+  @media ${DEVICES.tablet} {
+    width: 100% ;
+  }
 `;
 
 export const IconChevronDownWrapper = styled.div`

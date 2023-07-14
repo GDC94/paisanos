@@ -8,8 +8,10 @@ export const CardsGrid = styled.div`
   grid-auto-columns: min-content;
   column-gap: ${(props) => props.theme.size["2rem"]};
   row-gap: ${(props) => props.theme.size["2rem"]};
-
   @media ${DEVICES.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${DEVICES.mobileL} {
     grid-template-columns: repeat(1, 1fr);
     display: flex;
     flex-direction: column;

@@ -25,8 +25,8 @@ const Header = () => {
         </LogoContainer>
         <Divider />
         <NavItemsContainer>
-          <Text color='neutrals4' text={"Discover"} marginRight='2rem' />
-          <Text color='neutrals4' text={"What we do"} />
+          <Text pointer color='neutrals4' text={"Discover"} marginRight='2rem' />
+          <Text pointer color='neutrals4' text={"What we do"} />
         </NavItemsContainer>
       </HeaderContentLeft>
       <HeaderContentRight>

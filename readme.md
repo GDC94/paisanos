@@ -1,5 +1,5 @@
-
 ## 🕺 Cómo levantar el proyecto
+
 ```bash
 
 # Clonar el repositorio.
@@ -18,8 +18,8 @@ npm run dev
 
 ## Tecnologías utilizadas
 
-* [React js]()
-* [Styled Components]()
-* [Framer Motion]()
-* [Typescript](https://www.typescriptlang.org)
-* [Emotion]
+- [React js]()
+- [Styled Components]()
+- [Framer Motion]()
+- [Typescript](https://www.typescriptlang.org)
+- [Emotion]

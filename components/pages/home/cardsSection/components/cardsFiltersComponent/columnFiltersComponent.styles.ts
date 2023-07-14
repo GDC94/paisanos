@@ -1,21 +1,23 @@
 import styled from "@emotion/styled";
+import { DEVICES } from "config";
 
 export const CardsFiltersContainer = styled.div`
   min-width: 256px;
-  height: 600px;
   background-color: ${(props) => props.theme.colors.neutrals1};
   border-radius: ${(props) => props.theme.size["1.5rem"]};
   transition-duration: 0.4s;
+
+  @media ${DEVICES.tablet} {
+    width: 100%;
+  }
 `;
 
 export const RangeFilterContent = styled.div``;
 
 export const DropContentMostLiked = styled.div`
-  width: 256px;
   margin-bottom: ${(props) => props.theme.size["1.5rem"]};
 `;
 export const DropContentColors = styled.div`
-  width: 256px;
   margin-bottom: 3rem;
 `;
 

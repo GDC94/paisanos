@@ -27,6 +27,7 @@ export interface TextPaisaProps {
   textTransform?: "upper";
   lineHeight?: string;
   isPoppins?: boolean;
+  pointer?: boolean;
 }
 
 export const TextCommon = styled.div<TextPaisaProps>`
@@ -48,6 +49,9 @@ export const TextCommon = styled.div<TextPaisaProps>`
   text-transform: ${(props) => (props.textTransform ? "uppercase" : "none")};
   font-family: ${(props) =>
     props.isPoppins ? props.theme.fonts.Poppins : props.theme.fonts.DMsans};
+
+  cursor: ${(props) => (props.pointer ? "pointer" : "none")};
+
   line-height: ${(props) =>
     props.lineHeight
       ? props.theme.size[props.lineHeight as keyof typeof props.theme.size]
